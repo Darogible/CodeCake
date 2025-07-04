@@ -1,0 +1,20 @@
+{
+  "filters_button": "Zobrazit filtry",
+  "filters_button_close": "Skrýt filtry",
+  "search_cake_placeholder": "Hledat dort",
+  "categories": "Kategorie:",
+  "chocolate": "Čokoládový",
+  "fruity": "Ovocný",
+  "caramel": "Karamelový",
+  "no_sugar": "Bez cukru",
+  "weight": "Hmotnost: ",
+  "weight_small": "Malý (0–400g)",
+  "weight_medium": "Střední (400–1000g)",
+  "weight_large": "Velký (1000 g a více)",
+  "price_max": "Cena do:",
+  "apply_button": "Použít",
+  "add_to_cart": "Do košíku",
+  "price": "Cena: ",
+  "add_to_cart_close": "Odebrat z košíku"
+
+}

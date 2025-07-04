@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/main.css?v=1.0">
+  <link rel="stylesheet" href="styles/dark.css" id="dark-style" disabled>
+  <title>CodeCake</title>
+</head>
+
+<body>
+  <header>
+
+    <div class="logo">
+      <a class="header-logo" href="./index.html">
+        <img src="./assets/codeCake2.png" alt="CodeCake logo">
+        <span>CodeCake</span>
+      </a>
+    </div>
+
+    <div class="header-buttons">
+      <!-- Theme color switcher -->
+      <label class="switch-theme">
+        <input type="checkbox" id="toggle-theme">
+        <span class="slider-theme"></span>
+      </label>
+      <!-- Language switcher -->
+      <div class="lang-switcher">
+        <button class="lang-button" id="lang-toggle">
+          🌐 <span id="current-lang">EN</span> ▼
+        </button>
+
+        <ul class="lang-dropdown visually-hidden" id="lang-menu">
+          <li data-lang="en">English</li>
+          <li data-lang="cz">Čeština</li>
+          <li data-lang="ru">Русский</li>
+        </ul>
+
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="main-container">
+      <div class="search-cake">
+        <div class="search-input">
+          <input
+                  type="text"
+                  data-i18n-placeholder="search_cake_placeholder"
+                  placeholder="Search a cake"
+          />
+          <button class="search-icon">🔍</button>
+        </div>
+      </div>
+
+      <div class="filters-cake">
+        <button class="filters-button" data-i18n="filters_button" id="filters-button">Show filters</button>
+        <div class="sidebar-filters visually-hidden" id="sidebar-filters">
+          <div class="filling-and-weight-container">
+            <div class="sidebar-categories">
+              <label data-i18n="categories">Categories:</label>
+
+              <label>
+                <input type="checkbox" class="input-filling" name="filling" value="chocolate">
+                <span data-i18n="chocolate">Chocolate</span>
+              </label>
+
+              <label>
+                <input type="checkbox" class="input-filling" name="filling" value="fruity">
+                <span data-i18n="fruity">Fruity</span>
+              </label>
+
+              <label>
+                <input type="checkbox" class="input-filling" name="filling" value="caramel">
+                <span data-i18n="caramel">Caramel</span>
+              </label>
+
+              <label>
+                <input type="checkbox" class="input-filling" name="filling" value="no-sugar">
+                <span data-i18n="no_sugar">No sugar</span>
+              </label>
+            </div>
+
+
+            <div class="sidebar-weight">
+              <label data-i18n="weight">Weight:</label>
+              <label>
+                <input type="checkbox" class="input-weight" name="weight" value="small">
+                <span data-i18n="weight_small">Small (0–400g)</span>
+              </label>
+              <label>
+                <input type="checkbox" class="input-weight" name="weight" value="medium" >
+                <span data-i18n="weight_medium">Medium (400–1000g)</span>
+              </label>
+              <label>
+                <input type="checkbox" class="input-weight" name="weight" value="big">
+                <span data-i18n="weight_large">Large (1000g and more)</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="sidebar-price">
+            <label class="max-price" data-i18n="price_max">Price up to:</label>
+            <input id="price-range" type="range" min="400" max="1500" value="1000" step="100" oninput="priceDisplay.innerText = this.value + ' Kč'">
+            <div class="range-display" id="price-display">1000 Kč</div>
+          </div>
+
+          <div class="apply-filters">
+            <button class="apply-button" data-i18n="apply_button" id="apply-filters-button">Apply</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cakes-container grid-container">
+        <!-- loading via js -->
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <p data-i18n="footer_copyright"> &copy; 2025 CodeCake – self-educational project</p>
+
+      <div class="footer-tel">
+        <p data-i18n="footer_our_tel">To order a cake, call: <a href="+420999999999">+420 999 999 999</a></p>
+        <p data-i18n="footer_customer_tel">  Or leave your number, we will call you back: </p>
+        <div class="footer-customer-tel">
+          <input type="tel" placeholder="+420 555 777 888">
+          <button data-i18n="send_to_us">Send</button>
+        </div>
+      </div>
+
+      <!-- Social links  -->
+      <div class="footer-socials">
+        <p data-i18n="write_to_us">Follow us on our social networks: </p>
+        <div class="footer-socials-container">
+          <a href="https://github.com/Darogible" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/andrei-afanasev-a25884350/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="./scripts/i18n.js" defer></script>
+  <script src="./scripts/main.js" defer></script>
+  <script src="./scripts/filters.js" defer></script>
+  <script src="./scripts/products.js" defer></script>
+  <script src="./scripts/render.js" defer></script>
+  <!--
+  <script src="./scripts/cart.js" defer></script>
+  -->
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "filters_button": "Показать фильтры",
+  "filters_button_close": "Скрыть фильтры",
+  "search_cake_placeholder": "Поиск торта",
+  "categories": "Категории:",
+  "chocolate": "Шоколадный",
+  "fruity": "Фруктовый",
+  "caramel": "Карамельный",
+  "no_sugar": "Без сахара",
+  "weight": "Вес: ",
+  "weight_small": "Маленький (0–400г)",
+  "weight_medium": "Средний (400–1000г)",
+  "weight_large": "Большой (1000 г и более)",
+  "price_max": "Цена до:",
+  "apply_button": "Применить",
+  "add_to_cart": "В корзину",
+  "price": "Цена: ",
+  "add_to_cart_close": "Убрать из корзины"
+
+}

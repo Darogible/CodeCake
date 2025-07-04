@@ -1,0 +1,128 @@
+[
+  {
+    "id": "cake-001",
+    "name": {
+      "en": "Chocolate Velvet",
+      "ru": "Шоколадный вельвет",
+      "cz": "Čokoládový samet"
+    },
+    "description": {
+      "en": "Smooth chocolate mousse cake with a crunchy base and cocoa topping.",
+      "ru": "Нежный шоколадный муссовый торт с хрустящей основой и посыпкой из какао.",
+      "cz": "Jemný čokoládový mousse dort s křupavým základem a kakaovým posypem."
+    },
+    "filling": ["chocolate"],
+    "features": [],
+    "weight": 800,
+    "price": 1450,
+    "image": "cake-001.jpg"
+  },
+  {
+    "id": "cake-002",
+    "name": {
+      "en": "Layered Mocha",
+      "ru": "Слойка Мокко",
+      "cz": "Vrstvené mokka"
+    },
+    "description": {
+      "en": "Classic layered cake with coffee-chocolate sponge and creamy filling, topped with chocolate curls.",
+      "ru": "Классический слоёный торт с кофейно-шоколадным бисквитом и кремовой прослойкой, украшен шоколадной стружкой.",
+      "cz": "Klasický vrstvený dort s kávovo-čokoládovým piškotem a krémovou náplní, ozdobený čokoládovými hoblinkami."
+    },
+    "filling": ["chocolate"],
+    "features": [],
+    "weight": 1000,
+    "price": 590,
+    "image": "cake-002.jpg"
+  },
+  {
+    "id": "cake-003",
+    "name": {
+      "en": "Red Velvet",
+      "ru": "Красный бархат",
+      "cz": "Červený samet"
+    },
+    "description": {
+      "en": "Classic red velvet cake with soft layers and a creamy cheese frosting.",
+      "ru": "Классический торт «Красный бархат» с мягкими коржами и кремом из сливочного сыра.",
+      "cz": "Klasický dort Red Velvet s měkkými vrstvami a krémem ze smetanového sýra."
+    },
+    "filling": ["fruity"],
+    "features": [],
+    "weight": 900,
+    "price": 490,
+    "image": "cake-003.jpg"
+  },
+  {
+    "id": "cake-004",
+    "name": {
+      "en": "Berry Garden",
+      "ru": "Ягодный сад",
+      "cz": "Ovocná zahrada"
+    },
+    "description": {
+      "en": "Elegant cake topped with a generous mix of fresh berries and soft cream layers inside.",
+      "ru": "Элегантный торт с пышным слоем свежих ягод и нежным сливочным кремом внутри.",
+      "cz": "Elegantní dort s bohatou vrstvou čerstvého ovoce a jemným smetanovým krémem uvnitř."
+    },
+    "filling": ["fruity"],
+    "features": [],
+    "weight": 1200,
+    "price": 790,
+    "image": "cake-004.jpg"
+  },
+  {
+    "id": "cake-005",
+    "name": {
+      "en": "Mango Breeze",
+      "ru": "Манговый бриз",
+      "cz": "Mangový vánek"
+    },
+    "description": {
+      "en": "Light cake with whipped cream frosting and juicy mango cubes on top.",
+      "ru": "Лёгкий торт с воздушным кремом и сочными кубиками манго сверху.",
+      "cz": "Lehký dort se šlehačkovým krémem a šťavnatými kousky manga navrchu."
+    },
+    "filling": ["fruity"],
+    "features": [],
+    "weight": 300,
+    "price": 360,
+    "image": "cake-005.jpg"
+  },
+  {
+    "id": "cake-006",
+    "name": {
+      "en": "Tropical Glow",
+      "ru": "Тропическое сияние",
+      "cz": "Tropický lesk"
+    },
+    "description": {
+      "en": "Bright mousse cake with tropical fruit glaze and soft sponge base.",
+      "ru": "Яркий муссовый торт с тропической фруктовой глазурью и мягким бисквитом.",
+      "cz": "Zářivý mousse dort s tropickou ovocnou polevou a měkkým piškotem."
+    },
+    "filling": ["fruity"],
+    "features": [],
+    "weight": 850,
+    "price": 520,
+    "image": "cake-006.jpg"
+  },
+  {
+    "id": "cake-007",
+    "name": {
+      "en": "Caramel Popcorn",
+      "ru": "Карамельный попкорн",
+      "cz": "Karamelový popcorn"
+    },
+    "description": {
+      "en": "Fun party cake with caramel glaze and crunchy popcorn on whipped cream.",
+      "ru": "Весёлый праздничный торт с карамельной глазурью и хрустящим попкорном на сливочном креме.",
+      "cz": "Zábavný dort s karamelovou polevou a křupavým popcornem na šlehačkovém krému."
+    },
+    "filling": ["caramel"],
+    "features": [],
+    "weight": 1000,
+    "price": 570,
+    "image": "cake-007.jpg"
+  }
+]

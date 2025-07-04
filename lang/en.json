@@ -1,0 +1,18 @@
+{
+  "filters_button": "Show filters",
+  "filters_button_close": "Close filters",
+  "search_cake_placeholder": "Search a cake",
+  "categories": "Categories:",
+  "chocolate": "Chocolate",
+  "fruity": "Fruity",
+  "caramel": "Caramel",
+  "no_sugar": "No sugar",
+  "weight": "Weight: ",
+  "weight_small": "Small (0–400g)",
+  "weight_medium": "Medium (400–1000g)",
+  "weight_large": "Large (1000g and more)",
+  "apply_button": "Apply",
+  "add_to_cart": "Add to cart",
+  "price": "Price: ",
+  "add_to_cart_close": "Remove from cart"
+}

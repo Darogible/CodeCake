@@ -1,0 +1,455 @@
+/* import fonts from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+:root {
+    --font-main: 'Nunito', sans-serif;
+    --font-accent: 'Marck Script', cursive;
+    --main-background-color: #FFF5F0;
+    --second-background-color: #fbe6dc;
+    --main-text-color: #4B3A2F;
+    --second-text-color: #ccbdac;
+    --main-button-color: #8BE38A;
+
+    --dark-theme-background: #919191;
+
+    --transition-duration: 0.4s;
+    --default-padding: 0;
+    --default-margin: 0;
+}
+
+/* basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    background-color: var(--main-background-color);
+    font-family: var(--font-main);
+    color: var(--main-text-color);
+    font-size: 16px;
+    line-height: 1.5;
+    list-style: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.no-scroll {
+    overflow: hidden !important;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    clip: rect(0, 0, 0, 0) !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+}
+
+a {
+    color: inherit; /* the color will inherit from the parent */
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+
+
+/*           */
+/* main code */
+/*           */
+
+/*  header   */
+header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+
+    background-color: var(--second-background-color);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+
+.logo, .header-buttons, .header-logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+
+.header-logo, .header-logo img {
+    height: 55px;
+}
+
+.header-buttons {
+    gap: 3vw;
+    position: absolute;
+    right: 1rem;
+}
+
+.lang-button {
+    background-color: transparent;
+    border: 1px solid var(--main-text-color);
+    border-radius: 999px;
+    padding: 0.3rem 0.3rem;
+    color: var(--main-text-color);
+    font-weight: 500;
+
+    width: 80px;
+    height: 30px;
+}
+
+/* beautiful theme switcher */
+.switch-theme {
+    width: 70px;
+    height: 30px;
+    /* to give absolute to .slider-theme */
+    position: relative;
+    display: inline-block;
+}
+
+/* I hid the switch so that it is not visible, but the functionality remains */
+.switch-theme input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider-theme {
+    background-color: #b6b6b6;
+    border-radius: 999px;
+    transition: var(--transition-duration);
+    /* to position relative to switch-theme so it takes up the entire parent container */
+    position: absolute;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
+}
+
+/* white round slider on the switch */
+.slider-theme::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "";
+    height: 25px;
+    width: 25px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: var(--transition-duration);
+}
+
+input:checked + .slider-theme {
+    background-color: #298ad5;
+}
+
+input:checked + .slider-theme::before {
+    transform: translate(35px, -50%);
+}
+
+
+/* main */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-cake {
+    padding-top: 2rem;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    border: none;
+    background: none;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-cake input {
+    border-radius: 999px;
+    width: 200px;
+    height: 30px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    background-color: #cccccc;
+
+    border: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.search-cake input:focus {
+    border-color: #b8b198;
+    outline: none;
+}
+
+.search-cake input[type="text"] {
+    padding-left: 10px;
+    color: black;
+}
+
+.search-cake {
+    padding-top: 2rem;
+}
+
+.search-input {
+    position: relative;
+    display: inline-block;
+}
+
+.search-cake input::placeholder {
+    color: black;
+    opacity: 0.5;
+}
+
+
+/* filters */
+.filters-cake {
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.filters-button {
+    padding: 0.3rem 0.6rem;
+    border-radius: 10px;
+    background-color: var(--main-button-color);
+    border: none;
+}
+
+.sidebar-filters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 90vw;
+    background-color: #e8e8e8;
+    border-radius: 8px;
+    padding: 0.3rem 0.2rem;
+    margin-top: 0.3rem;
+    padding-bottom: 1rem;
+}
+
+
+.filling-and-weight-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.sidebar-categories {
+    min-width: 125px;
+}
+
+
+.sidebar-categories, .sidebar-weight {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-price {
+    display: flex;
+    flex-direction: column;
+}
+
+.max-price, .range-display {
+    text-align: center;
+}
+
+.apply-button {
+    padding: 0.2rem 0.8rem;
+    background-color: var(--main-button-color);
+    border-radius: 10px;
+    border: none;
+}
+
+
+
+/* lang */
+.lang-switcher {
+    position: relative;
+}
+
+.lang-dropdown {
+    position: absolute;
+    background-color: #cccccc;
+    list-style: none;
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+}
+
+.lang-dropdown li {
+    padding: 0.2rem 0.1rem;
+}
+
+.grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    display: grid;
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px;
+
+    padding-inline: 1.5rem;
+}
+
+
+.cake-card {
+    background-color: var(--second-background-color);
+    margin-block: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0.3rem;
+    border-radius: 10px;
+
+
+
+}
+
+.cake-card img {
+    border-radius: 10px;
+    max-width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+}
+
+
+
+.cake-card p {
+    display: none;
+}
+
+.filling {
+    display: none;
+}
+
+
+
+
+.price {
+    font-weight: bold;
+}
+
+.title {
+    text-align: center;
+    padding-block: 0.3rem;
+    min-height: 65px;
+}
+
+.price-string {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.add-to-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 999px;
+    background-color: var(--main-button-color);
+}
+
+.weight-string {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+
+
+/*               */
+/*    footer     */
+/*               */
+.footer-container {
+    background-color: var(--second-background-color);
+    display: flex;
+    flex-direction: column;
+    padding-inline: 0.6rem;
+}
+
+.footer-container > p {
+    font-weight: bold;
+    padding-block: 0.8rem;
+    text-align: center;
+}
+
+.footer-tel a, .footer-socials a {
+    color: #29c8f1;
+    font-weight: bold;
+}
+
+.footer-socials-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer-socials {
+    text-align: center;
+    padding-top: 0.5rem;
+    padding-bottom: 2rem;
+}
+
+.footer-customer-tel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-block: 0.2rem;
+}
+
+.footer-customer-tel input {
+    height: 2rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.1rem;
+}
+
+.footer-customer-tel button {
+    padding-block: 0.3rem;
+    margin-block: 0.5rem;
+    background-color: var(--main-button-color);
+    border: none;
+    border-radius: 999px;
+    min-width: 5rem;
+    font-weight: bold;
+}
+
+
+
