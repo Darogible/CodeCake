@@ -10,7 +10,6 @@
 
 <body>
   <header>
-
     <div class="logo">
       <a class="header-logo" href="./index.html">
         <img src="./assets/codeCake2.png" alt="CodeCake logo">
@@ -18,14 +17,45 @@
       </a>
     </div>
 
-    <div class="header-buttons">
+    <div class="small-mobile-header">
+      <div class="header-cart" id="header-cart">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+          <!--!Font Awesome Free 6.7.2 by @fontawesome-->
+          <path d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41
+          152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24
+          10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7
+          48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/>
+        </svg>
+        <div class="cart-display visually-hidden" id="cart-display">
+          <!-- loading via js -->
+        </div>
+      </div>
+
+      <div class="nav-button"><button class="burger" id="burger-button" aria-label="Open menu">☰</button>
+
+      </div>
+    </div>
+
+
+    <nav class="header-buttons" id="nav-bar">
+      <div class="account-container">
+        <p class="account" data-i18n="account_text">Login to your account</p>
+        <button class="account-button" id="account-button" data-i18n="log_in">Log In</button>
+        <button class="new-account-button" id="new-account-button" data-i18n="sign_up">Sign Up</button>
+      </div>
+      <div id="new-account-container"></div>
       <!-- Theme color switcher -->
-      <label class="switch-theme">
-        <input type="checkbox" id="toggle-theme">
-        <span class="slider-theme"></span>
-      </label>
+      <div class="switch-container">
+        <p data-i18n="switch_theme_text">Dark/Light Theme</p>
+        <label class="switch-theme">
+          <input type="checkbox" id="toggle-theme">
+          <span class="slider-theme"></span>
+        </label>
+      </div>
       <!-- Language switcher -->
       <div class="lang-switcher">
+        <p data-i18n="switch_language_text">Select language</p>
+
         <button class="lang-button" id="lang-toggle">
           🌐 <span id="current-lang">EN</span> ▼
         </button>
@@ -35,9 +65,8 @@
           <li data-lang="cz">Čeština</li>
           <li data-lang="ru">Русский</li>
         </ul>
-
       </div>
-    </div>
+    </nav>
   </header>
 
   <main>
@@ -101,7 +130,8 @@
 
           <div class="sidebar-price">
             <label class="max-price" data-i18n="price_max">Price up to:</label>
-            <input id="price-range" type="range" min="400" max="1500" value="1000" step="100" oninput="priceDisplay.innerText = this.value + ' Kč'">
+            <input id="price-range" type="range" min="400" max="1500" value="1000" step="100"
+                   oninput="priceDisplay.innerText = this.value + ' Kč'">
             <div class="range-display" id="price-display">1000 Kč</div>
           </div>
 
@@ -142,14 +172,107 @@
   </footer>
 
 
+  <!-- additional blocks, pop-ups -->
+  <div class="back-to-top visually-hidden" aria-label="Back to top" id="back-to-top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 4l-8 8h5v8h6v-8h5z"/>
+    </svg>
+  </div>
+
+  <div class="cart-display-container visually-hidden" id="cart-display-container">
+
+  </div>
+
+  <div class="log-in-container visually-hidden" id="log-in-container">
+    <span class="close-form">✖</span>
+    <h3 class="log-in" data-i18n="log_in_your_account">Login to your account</h3>
+    <input
+            id="log-in-email-input"
+            data-i18n-placeholder="log_in_email"
+            type="email"
+            placeholder="example@gmail.com"
+    >
+    <input
+            id="log-in-password-input"
+            data-i18n-placeholder="log_in_password"
+            type="password"
+            placeholder="Enter your password"
+    >
+    <div class="log-in-error visually-hidden" data-i18n="log_in_error">Incorrect email or password</div>
+    <button id="log-in-button" data-i18n="log_in_button">Log in</button>
+    <div class="question-about-sign-up">
+      <p data-i18n="question_about_sign_up">Don't have an account yet?</p>
+      <a href="#" data-i18n="sign_up" id="sign_up_button_login_form">Sign up</a>
+    </div>
+  </div>
+
+
+
+  <div class="sign-up-container visually-hidden" id="sign-up-container">
+    <span class="close-form">✖</span>
+    <h3 class="sign-up" data-i18n="sign_up_your_account">Create an Account</h3>
+    <div>
+      <p data-i18n="full_name">What is your full name?</p>
+      <input
+              id="name-and-surname-input"
+              data-i18n-placeholder="name_and_surname_input"
+              type="text"
+              placeholder="Name and surname"
+      >
+      <div id="control-name" class="visually-hidden control-input-correctness"></div>
+    </div>
+    <div>
+      <p data-i18n="email_address">Email Address</p>
+      <input
+              id="sign-up-email-input"
+              data-i18n-placeholder="sign_up_email"
+              type="email"
+              placeholder="example@gmail.com"
+      >
+      <div id="control-email" class="visually-hidden control-input-correctness"></div>
+    </div>
+    <div>
+      <p data-i18n="password">Password</p>
+      <input
+              id="sign-up-password-input"
+              data-i18n-placeholder="sign_up_password"
+              type="password"
+              placeholder="Enter your password"
+      >
+      <div id="strength-password" class="visually-hidden control-input-correctness"></div>
+    </div>
+    <div>
+      <p data-i18n="confirm_password">Confirm password</p>
+      <input
+              id="sign-up-repeat-password-input"
+              data-i18n-placeholder="sign_up_repeat_password"
+              type="password"
+              placeholder="Repeat your password"
+      >
+      <div id="repeat-password" class="visually-hidden control-input-correctness"></div>
+    </div>
+    <div>
+      <p data-i18n="telephone_number">Phone Number (optional)</p>
+      <input
+              id="telephone-number-input"
+              type="tel"
+              placeholder="+420 555 777 888"
+      >
+      <div id="control-telephone-number" class="visually-hidden control-input-correctness"></div>
+    </div>
+    <div class="sign-up-error visually-hidden" data-i18n="sign_up_error">⚠️ Please correct the errors in the form</div>
+    <button data-i18n="sign_up_button" id="sign-up-button">Sign Up</button>
+  </div>
+
+
 
   <script src="./scripts/i18n.js" defer></script>
   <script src="./scripts/main.js" defer></script>
   <script src="./scripts/filters.js" defer></script>
   <script src="./scripts/products.js" defer></script>
   <script src="./scripts/render.js" defer></script>
-  <!--
   <script src="./scripts/cart.js" defer></script>
-  -->
+  <script src="./scripts/register.js" defer></script>
+  <script src="./scripts/account.js" defer></script>
 </body>
 </html>

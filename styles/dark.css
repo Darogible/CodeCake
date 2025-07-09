@@ -28,7 +28,25 @@ header, .footer-container {
     color: white;
 }
 
-.sidebar-filters, .cake-card,.search-cake input {
+.sidebar-filters, .cake-card,.search-cake input, .card-cart {
     background-color: var(--dark-theme-background);
+}
+
+.header-buttons {
+    background-color: rgb(30, 30, 30);;
+}
+
+.burger {
+    color: white;
+    border-color: white;
+}
+
+.header-cart svg {
+    fill: white;
+}
+
+.cart-display-container {
+    background-color: rgb(30, 30, 30);
+    box-shadow: -4px 4px 8px rgba(255, 255, 255, 0.23);
 }
 
