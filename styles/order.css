@@ -1,0 +1,260 @@
+
+.card-cart {
+    width: 280px;
+
+}
+
+.order-cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#total-amount {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.info-about-order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    padding: 1rem;
+}
+
+.info-order {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-order input, .date-of-order input  {
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    padding: 0.3rem 0.4rem;
+    background-color: #ffffff;
+}
+
+.info-order input:focus, .date-of-order input:focus{
+    border: 1px solid #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.date-of-order {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    text-align: center;
+}
+
+.date-of-order input  {
+    margin: 0.4rem auto;
+    width: 100px;
+    text-align: center;
+}
+
+.date-of-order p {
+    margin: 0.4rem 0 0.4rem 0;
+}
+
+#proceed-to-payment {
+    border-radius: 12px;
+    border: none;
+    background-color: var(--main-button-color);
+    color: var(--main-text-color);
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    margin: 1rem 0 3rem 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#control-date-of-order {
+    margin: 0.3rem auto;
+}
+
+
+/* payment.html */
+.payment-header {
+    margin: 1rem auto;
+}
+
+.payment-description {
+    margin: 0 2rem 1rem 2rem;
+}
+
+.card-warning {
+    color: red;
+}
+
+.except-card {
+    background-color: #d6d6d6;
+    border-radius: 6px;
+    padding: 0.1rem 0.3rem;
+}
+
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    background-color: white;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+}
+
+.payment-form > p {
+    margin: 0.1rem auto;
+    font-weight: 650;
+    text-align: center;
+}
+
+.payment-form input {
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 0.3rem 0.4rem;
+    background-color: #ffffff;
+}
+
+.payment-form input:focus {
+    border: 1px solid #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.card-details {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 1rem;
+}
+
+.payment-form > div {
+    width: 180px;
+}
+
+label {
+    display: block;
+    margin-bottom: 1px;
+    font-weight: bold;
+}
+
+
+.card-date,
+.card-cvv {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-date input,
+.card-cvv input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.payment-form label {
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.card-cvv-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.info-icon {
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    font-size: 0.7rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-20px, 0);
+    margin: auto;
+    background-color: #4343ff;
+    color: white;
+    position: relative;
+}
+
+.cvv-tooltip {
+    position: absolute;
+    top: 30px;
+    background-color: #d6d6d6;
+    z-index: 10;
+    width: 100px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 0.2rem
+}
+
+.payment-button {
+    margin: 0.4rem auto;
+    padding: 0.5rem 3rem;
+    background-color: #4343ff;
+    font-weight: bold;
+    color: white;
+    border-radius: 12px;
+    border: none;
+}
+
+.main-payment {
+    margin-bottom: 20rem;
+}
+
+
+
+/* modal payment verification */
+#loading, .payment-result {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    background-color: var(--second-background-color);
+    border-radius: 14px;
+    min-width: 280px;
+}
+
+.loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1.2s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.payment-result {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+#payment-data-error {
+    border-radius: 8px;
+    padding: 0.1rem 0.3rem;
+}

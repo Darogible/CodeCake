@@ -83,6 +83,13 @@ html, body {
 }
 
 
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #fff inset !important;
+    box-shadow: 0 0 0 1000px #fff inset !important;
+    -webkit-text-fill-color: #000 !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
 
 
 
@@ -151,8 +158,9 @@ header.no-shadow {
     border-radius: 999px;
     background-color: transparent;
     color: var(--main-text-color);
-    border: 1px solid var(--main-text-color);
+    border: 2px solid var(--main-text-color);
     font-size: 0.8rem;
+    font-weight: bold;
     padding: 0.2rem 0.4rem;
 }
 
@@ -311,8 +319,8 @@ input:checked + .slider-theme::before {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    padding: 0.5rem 0.2rem;
+    justify-content: space-between;
+    padding: 0.5rem 0.8rem;
     margin: 0.5rem;
     background-color: var(--second-background-color);
     background-color: #efd8cb;
@@ -380,6 +388,13 @@ input:checked + .slider-theme::before {
     border: none;
     margin: 0.2rem auto 0.8rem auto;
     padding: 0.4rem 1rem;
+}
+
+.empty-cart {
+    margin: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
 }
 
 
@@ -771,7 +786,7 @@ main {
 }
 
 .footer-customer-tel button {
-    padding-block: 0.3rem;
+    padding: 0.5rem 0.9rem;
     margin-block: 0.5rem;
     background-color: var(--main-button-color);
     border: none;
@@ -803,6 +818,25 @@ main {
     opacity: 0.8;
 }
 
+/* order.html */
+.back-button {
+    background-color: #B9E7C2;
+    border: none;
+    border-radius: 12px;
+    padding: 0.2rem 0.8rem;
+    position: absolute;
+    right: 0.5rem;
+}
+
+.order-header {
+    text-align: center;
+    padding: 1rem 2rem;
+}
+
+
+
+
+
 
 
 
@@ -823,11 +857,7 @@ main {
 }
 
 
-
 /*
-
-
-
 
 * {
     outline: 1px solid rgba(255, 0, 0, 0.2);

@@ -2,16 +2,19 @@
 const langToggle = document.getElementById('lang-toggle');
 const langMenu = document.getElementById('lang-menu');
 
-langToggle.addEventListener("click", () => {
-    if(langMenu.classList.contains('visually-hidden')) {
-        langMenu.classList.remove('visually-hidden');
-    } else {
-        langMenu.classList.add('visually-hidden');
-    }
-})
+if(langToggle) {
+    langToggle.addEventListener("click", () => {
+        if(langMenu.classList.contains('visually-hidden')) {
+            langMenu.classList.remove('visually-hidden');
+        } else {
+            langMenu.classList.add('visually-hidden');
+        }
+    });
+}
 
 // if there is a saved language in localStorage, apply it when opening the page
 const savedLang = localStorage.getItem('lang');
+
 
 if(savedLang) {
     translatePage(savedLang);
@@ -23,7 +26,9 @@ if(savedLang) {
 // implementation of updating the value in the language selection button
 function updateLangButton(language) {
     const currentLang = document.getElementById('current-lang');
-    currentLang.textContent = language.toUpperCase();
+    if(currentLang) {
+        currentLang.textContent = language.toUpperCase();
+    }
 }
 
 

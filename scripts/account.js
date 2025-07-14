@@ -10,30 +10,43 @@ function cleanOldFormLogIn() {
     logInPasswordInput.value = "";
 }
 
-const userData = JSON.parse(localStorage.getItem("userData"));
+let userData = JSON.parse(localStorage.getItem("userData"));
 
 function controlAccount(email, password) {
+    userData = JSON.parse(localStorage.getItem("userData"));
+    if (!userData) {
+        console.log("No user data found in localStorage.");
+        return false;
+    }
     if(email === userData.email && password === userData.password) {
         return true;
     }
+    console.log("email: ", email);
+    console.log("password: ", password);
+    console.log("userData.email: ", userData.email);
+    console.log("userData.password: ", userData.password);
 }
 
 const logInError = document.querySelector(".log-in-error");
 
 // clicking the "Log in" button
-logInButton.addEventListener("click", () => {
-    const email = logInEmailInput.value.trim().toLowerCase();
-    const password = logInPasswordInput.value.trim();
+if(logInButton) {
+    logInButton.addEventListener("click", () => {
+        const email = logInEmailInput.value.trim().toLowerCase();
+        const password = logInPasswordInput.value.trim();
 
-    if(controlAccount(email, password)) {
-        //console.log("Successful login to account");
-        displayAccount();
-        logInContainer.classList.add('visually-hidden');
-    } else {
-        logInError.classList.remove('visually-hidden');
-        // console.log("Error! Account login failed");
-    }
-})
+        if(controlAccount(email, password)) {
+            //console.log("Successful login to account");
+            displayAccount();
+            logInContainer.classList.add('visually-hidden');
+        } else {
+            logInError.classList.remove('visually-hidden');
+            // console.log("Error! Account login failed");
+        }
+    });
+}
+
+
 
 // remove the error message when the user starts to re-enter the login and password
 logInEmailInput.addEventListener("input", () => {
@@ -48,9 +61,14 @@ logInPasswordInput.addEventListener("input", () => {
 const newAccountContainer = document.getElementById("new-account-container");
 const accountContainer = document.querySelector(".account-container");
 
+
 // show account instead of login and registration buttons
 function displayAccount() {
+    newAccountContainer.classList.remove('visually-hidden');
+    newAccountContainer.innerHTML = '';
+
     accountContainer.classList.add('visually-hidden');
+
 
     const greeting = document.createElement('div');
     greeting.classList.add('greeting');
@@ -73,6 +91,9 @@ function displayAccount() {
     myAccountButton.id = "my-account-button";
     myAccountButton.setAttribute('data-i18n', 'my_account_button');
     myAccountButton.textContent = "My account";
+    myAccountButton.addEventListener('click', () => {
+        window.location.href = './profile.html';
+    })
     newAccountContainer.appendChild(myAccountButton);
 
     const logOutButton = document.createElement('button');
@@ -89,6 +110,11 @@ function displayAccount() {
     translatePage(localStorage.getItem('lang'));
 }
 
+// if the user already has an account, the login will be automatic
+if(userData && Object.keys(userData).length > 0) {
+    displayAccount();
+    logInContainer.classList.add('visually-hidden');
+}
 
 
 

@@ -1,0 +1,244 @@
+
+/* profile.html */
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.profile-data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.profile-image {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-icon {
+    width: 48px;
+    height: 48px;
+    stroke: var(--main-text-color);
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.profile-email {
+    font-size: 0.8rem;
+}
+
+.profile-history-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 12px;
+    width: 90vw;
+    margin: 0.1rem auto;
+    font-size: 0.75rem;
+    padding: 0.2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20rem;
+}
+
+.profile-history-container h3 {
+    padding: 1rem;
+}
+
+.profile-history-missing {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-history {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.order-card, .history-title-table {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.history-title-table {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.history-title-table .history-items, .order-card .history-items {
+    flex: 3;
+}
+
+.history-title-table .history-date, .order-card .history-date {
+    min-width: 80px;
+}
+
+.history-title-table .history-total, .order-card .history-total {
+    min-width: 62px;
+}
+
+
+.history-title-table span,
+.order-card span {
+    flex: 1;
+    padding: 0.5rem;
+    text-align: left;
+    box-sizing: border-box;
+    word-break: break-word;
+    white-space: pre-wrap;
+    line-height: 1.2;
+    min-height: 100%;
+}
+
+.order-card {
+    border-top: 1px solid #ccc;
+    padding-top: 0.5rem;
+}
+
+.history-title-table .history-pickup-date {
+    padding-inline: 0.1rem !important;
+}
+
+.history-title-table span, .order-card span {
+    text-align: center;
+}
+
+.history-title-table .history-items {
+    text-align: left;
+    position: relative;
+    left: 0.5rem;
+}
+
+.order-card .history-items {
+    text-align: left;
+}
+
+
+
+
+
+/*                   */
+/* order-detail.html */
+/*                   */
+.title {
+    padding: 2rem;
+}
+
+.order-details {
+    width: 300px;
+    padding-inline: 1rem;
+}
+
+#order-date, #order-id {
+    font-weight: bold;
+}
+
+.goods-in-order {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--second-background-color);
+    margin: 0.5rem;
+    border-radius: 12px;
+}
+
+.goods-in-order-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.goods-in-order h4 {
+    margin: 0.5rem;
+}
+
+.cakes {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    width: 100%;
+}
+
+.info-div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.image-div {
+    padding: 0.2rem 0.5rem;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-div {
+    padding: 0.2rem 0.5rem;
+    width: 100%;
+}
+
+.image-div img {
+    border-radius: 12px;
+}
+
+.names {
+    font-weight: bold;
+    padding: 0.3rem 0.1rem;
+}
+
+.price {
+    font-weight: normal;
+}
+
+.final-price {
+    font-weight: 550;
+}
+
+.additional-info {
+    padding: 1rem;
+    margin-bottom: 12rem;
+}
+
+.total {
+    padding: 0.1rem 1rem 1rem 1rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+.additional-info h4 {
+    font-size: 1.1rem;
+}

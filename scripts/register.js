@@ -33,7 +33,7 @@ function cleanOldFormSignUp() {
 const nameAndSurnameInput = document.getElementById("name-and-surname-input");
 const controlName = document.getElementById("control-name");
 
-function validateNameAndSurname () {
+export function validateNameAndSurname () {
     const value = nameAndSurnameInput.value.trim(); // trim() will remove extra spaces
     if(/^[A-Za-zÀ-žА-Яа-яЁё]+([ -][A-Za-zÀ-žА-Яа-яЁё]+)+$/.test(value)) {
         return true;
@@ -41,17 +41,23 @@ function validateNameAndSurname () {
 }
 
 // remove the invalid name announcement if the user starts entering a new one
-nameAndSurnameInput.addEventListener("input", () => {
-    controlName.classList.add('visually-hidden');
-    signUpError.classList.add('visually-hidden');
-})
+if(nameAndSurnameInput) {
+    nameAndSurnameInput.addEventListener("input", () => {
+        if (controlName) {
+            controlName.classList.add('visually-hidden');
+        }
+        if(signUpError) {
+            signUpError.classList.add('visually-hidden');
+        }
+    });
+}
 
 
 // checking user's email
 const signUpEmailInput = document.getElementById("sign-up-email-input");
 const controlEmail = document.getElementById("control-email");
 
-function validateEmailSignUp() {
+export function validateEmailSignUp() {
     const value = signUpEmailInput.value.trim();
     if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
         return true;
@@ -59,17 +65,23 @@ function validateEmailSignUp() {
 }
 
 // remove the announcement about incorrect mail if the user starts entering a new one
-signUpEmailInput.addEventListener("input", () => {
-    controlEmail.classList.add('visually-hidden');
-    signUpError.classList.add('visually-hidden');
-})
+if(signUpEmailInput) {
+    signUpEmailInput.addEventListener("input", () => {
+        if (controlEmail) {
+            controlEmail.classList.add('visually-hidden');
+        }
+        if(signUpError) {
+            signUpError.classList.add('visually-hidden');
+        }
+    });
+}
 
 
 // checking the user's phone number
 const telephoneNumberInput = document.getElementById("telephone-number-input");
 const controlTelephoneNumber = document.getElementById("control-telephone-number");
 
-function validateTelephoneNumber() {
+export function validateTelephoneNumber() {
     const value = telephoneNumberInput.value.trim();
     // check for international number
     if(/^\+\d{6,15}$/.test(value.replace(/[\s\-()]/g, '')) || value === '') {
@@ -98,12 +110,12 @@ function controlStrengthPassword (password) {
     if (password.length === 0) {
         strengthPassword.textContent = "";
         strengthPassword.setAttribute("data-i18n", "strength_nothing");
-    } else if (strength > 2 && password.length > 7) {
+    } else if (strength > 1 && password.length > 7) {
         strengthPassword.setAttribute("data-i18n", "strength_strong");
         strengthPassword.textContent = "Strong";
         isPasswordStrongEnough = true;
         successStyles(strengthPassword);
-    } else if (strength > 1 && password.length > 7) {
+    } else if (strength === 1 && password.length > 7) {
         strengthPassword.setAttribute("data-i18n", "strength_medium");
         strengthPassword.textContent = "Medium";
         isPasswordStrongEnough = true;
@@ -120,37 +132,43 @@ function controlStrengthPassword (password) {
 }
 
 // the user enters the password himself
-signUpPasswordInput.addEventListener('input', () => {
-    const password = signUpPasswordInput.value;
-    controlStrengthPassword(password);
-})
+if(signUpPasswordInput) {
+    signUpPasswordInput.addEventListener('input', () => {
+        const password = signUpPasswordInput.value;
+        controlStrengthPassword(password);
+    });
+}
 
 // user pasted password from clipboard
-signUpPasswordInput.addEventListener('paste', () => {
-    setTimeout(() => {
-        controlStrengthPassword(signUpPasswordInput.value);
-    }, 10);
-})
+if(signUpPasswordInput) {
+    signUpPasswordInput.addEventListener('paste', () => {
+        setTimeout(() => {
+            controlStrengthPassword(signUpPasswordInput.value);
+        }, 10);
+    });
+}
 
 
 // check for repeated password entry
 const signUpRepeatPasswordInput = document.getElementById("sign-up-repeat-password-input");
 const repeatPassword = document.getElementById('repeat-password');
 
-signUpRepeatPasswordInput.addEventListener('input', () => {
-    if(controlRepeatPassword()) {
-        repeatPassword.setAttribute("data-i18n", "passwords_match");
-        repeatPassword.textContent = "Passwords match";
-        successStyles(repeatPassword);
-    } else {
-        repeatPassword.setAttribute("data-i18n", "passwords_do_not_match");
-        repeatPassword.textContent = "Passwords do not match";
-        addErrorStyles((repeatPassword))
-    }
+if(signUpRepeatPasswordInput) {
+    signUpRepeatPasswordInput.addEventListener('input', () => {
+        if(controlRepeatPassword()) {
+            repeatPassword.setAttribute("data-i18n", "passwords_match");
+            repeatPassword.textContent = "Passwords match";
+            successStyles(repeatPassword);
+        } else {
+            repeatPassword.setAttribute("data-i18n", "passwords_do_not_match");
+            repeatPassword.textContent = "Passwords do not match";
+            addErrorStyles((repeatPassword))
+        }
 
-    translatePage(localStorage.getItem('lang'));
-    repeatPassword.classList.remove('visually-hidden');
-})
+        translatePage(localStorage.getItem('lang'));
+        repeatPassword.classList.remove('visually-hidden');
+    })
+}
 
 function controlRepeatPassword() {
     if(signUpPasswordInput.value === signUpRepeatPasswordInput.value && signUpPasswordInput.value !== '') {
@@ -163,50 +181,50 @@ function controlRepeatPassword() {
 const signUpButton = document.getElementById("sign-up-button");
 const signUpError = document.querySelector(".sign-up-error");
 
-
-signUpButton.addEventListener("click", () => {
-    if(validateNameAndSurname() && validateEmailSignUp() && validateTelephoneNumber() && controlRepeatPassword()
-        && isPasswordStrongEnough) {
-        createAccount();
-        controlName.classList.add('visually-hidden');
-        // console.log("Account created successfully");
-    } else {
-        // console.log("Error! Account not created");
-        signUpError.classList.remove('visually-hidden');
-        if(signUpPasswordInput.value === '') {
-            strengthPassword.classList.remove('visually-hidden');
-            strengthPassword.setAttribute("data-i18n", "strength_error");
-            strengthPassword.textContent = "Please create a password";
-            addErrorStyles(strengthPassword);
+if(signUpButton) {
+    signUpButton.addEventListener("click", () => {
+        if(validateNameAndSurname() && validateEmailSignUp() && validateTelephoneNumber() && controlRepeatPassword()
+            && isPasswordStrongEnough) {
+            createAccount();
+            controlName.classList.add('visually-hidden');
+            // console.log("Account created successfully");
+        } else {
+            // console.log("Error! Account not created");
+            signUpError.classList.remove('visually-hidden');
+            if(signUpPasswordInput.value === '') {
+                strengthPassword.classList.remove('visually-hidden');
+                strengthPassword.setAttribute("data-i18n", "strength_error");
+                strengthPassword.textContent = "Please create a password";
+                addErrorStyles(strengthPassword);
+            }
         }
-    }
 
-    if (!validateNameAndSurname()) {
-        controlName.classList.remove('visually-hidden');
-        controlName.textContent = "Please enter a valid name";
-        controlName.setAttribute("data-i18n", "valid_name");
-        addErrorStyles(controlName);
-    }
+        if (!validateNameAndSurname()) {
+            controlName.classList.remove('visually-hidden');
+            controlName.textContent = "Please enter a valid name";
+            controlName.setAttribute("data-i18n", "valid_name");
+            addErrorStyles(controlName);
+        }
 
-    if (!validateEmailSignUp()) {
-        controlEmail.classList.remove('visually-hidden');
-        controlEmail.textContent = "Please enter a valid email";
-        controlEmail.setAttribute("data-i18n", "valid_email");
-        addErrorStyles(controlEmail);
-    }
+        if (!validateEmailSignUp()) {
+            controlEmail.classList.remove('visually-hidden');
+            controlEmail.textContent = "Please enter a valid email";
+            controlEmail.setAttribute("data-i18n", "valid_email");
+            addErrorStyles(controlEmail);
+        }
 
-    if (!validateTelephoneNumber()) {
-        controlTelephoneNumber.classList.remove('visually-hidden');
-        controlTelephoneNumber.textContent = "Telephone number is not valid";
-        controlTelephoneNumber.setAttribute("data-i18n", "valid_telephone");
-        addErrorStyles(controlTelephoneNumber);
-    }
+        if (!validateTelephoneNumber()) {
+            controlTelephoneNumber.classList.remove('visually-hidden');
+            controlTelephoneNumber.textContent = "Telephone number is not valid";
+            controlTelephoneNumber.setAttribute("data-i18n", "valid_telephone");
+            addErrorStyles(controlTelephoneNumber);
+        }
 
-    translatePage(localStorage.getItem('lang'));
-})
+        translatePage(localStorage.getItem('lang'));
+    })
+}
 
-
-function addErrorStyles(item) {
+export function addErrorStyles(item) {
     item.style.backgroundColor = '#f2dede';
     item.style.color = '#a94442';
 }
@@ -236,6 +254,8 @@ function createAccount() {
     cleanOldFormSignUp();
 }
 
+const newAccountContainer = document.getElementById("new-account-container");
+
 function successCreateAccount() {
     signUpContainer.classList.add("visually-hidden");
 
@@ -247,7 +267,14 @@ function successCreateAccount() {
 
     document.body.appendChild(alertBox);
 
+    if(userData && Object.keys(userData).length > 0) {
+        displayAccount();
+        logInContainer.classList.add('visually-hidden');
+    }
+
     setTimeout(() => {
         alertBox.remove();
     }, 1000);
+
+
 }

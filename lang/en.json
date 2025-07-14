@@ -51,5 +51,42 @@
   "sign_up_error": "⚠️ Please correct the errors in the form",
   "alertErrorBox": "🟢 Registration successful! 🟢",
   "greeting_phrase": "Hello, ",
-  "log_in_error": "Incorrect email or password"
+  "log_in_error": "Incorrect email or password",
+  "back_button": "← Back to main page",
+  "order_header": "Confirm your order",
+  "date_of_order": "Select the date of order pickup: ",
+  "proceed_to_payment": "Proceed to payment",
+  "total_amount": "Total order amount: ",
+  "complete_order": "Complete order",
+  "my_account_button": "My account",
+  "log-out_button": "Log Out",
+  "pickup_days": "We are open for pickup every day except Sundays.",
+  "pickup_hours": "Pickup hours: 8:00–17:00.",
+  "payment_title": "Payment for the order",
+  "card_warming": "⚠️ This is a demo site. Don’t use real card details. ⚠️",
+  "payment_note": "Enter random numbers. All cards work except",
+  "payment_description": "Payment by card",
+  "card_number": "Card number",
+  "card_date": "Validity period",
+  "card_cvv": "CVV",
+  "cart_is_empty": "Your cart is empty",
+  "profile_history": "History of your orders",
+  "profile_history_missing": "Your purchase history will be here",
+  "order_detail_title": "Order Detail",
+  "order_detail_id": "Your order number ",
+  "order_detail_date": "Create: ",
+  "goods_in_order": "Cakes in order",
+  "total_order_amount": "Total order amount: ",
+  "additional_info": "Additional order information:",
+  "additional_info_pickup": "Pickup date: ",
+  "additional_info_name": "Customer's name: ",
+  "additional_info_telephoneNumber": "Telephone number: ",
+
+
+
+
+
+
+
+
 }

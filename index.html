@@ -152,7 +152,7 @@
       <p data-i18n="footer_copyright"> &copy; 2025 CodeCake – self-educational project</p>
 
       <div class="footer-tel">
-        <p data-i18n="footer_our_tel">To order a cake, call: <a href="+420999999999">+420 999 999 999</a></p>
+        <p><span data-i18n="footer_our_tel">To order a cake, call:</span> <a href="+420999999999">+420 999 999 999</a></p>
         <p data-i18n="footer_customer_tel">  Or leave your number, we will call you back: </p>
         <div class="footer-customer-tel">
           <input type="tel" placeholder="+420 555 777 888">
@@ -265,14 +265,19 @@
   </div>
 
 
-
   <script src="./scripts/i18n.js" defer></script>
   <script src="./scripts/main.js" defer></script>
   <script src="./scripts/filters.js" defer></script>
   <script src="./scripts/products.js" defer></script>
   <script src="./scripts/render.js" defer></script>
-  <script src="./scripts/cart.js" defer></script>
-  <script src="./scripts/register.js" defer></script>
+  <script type="module" src="./scripts/cart.js" defer></script>
+  <script type="module" src="./scripts/register.js" defer></script>
   <script src="./scripts/account.js" defer></script>
+  <script type="module" src="./scripts/order.js"></script>
+
+  <!-- Flatpickr -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/cs.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js"></script>
 </body>
 </html>

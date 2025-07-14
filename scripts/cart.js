@@ -1,4 +1,5 @@
 // I record all clicks on the page, if there is one on the 'add-to-cart' I need, then I save it in localStorage
+const cartDisplay = document.getElementById('cart-display-container');
 
 document.addEventListener('click', function(event) {
     if (event.target.classList.contains('add-to-cart')) {
@@ -21,15 +22,18 @@ document.addEventListener('click', function(event) {
         }
 
         localStorage.setItem('cart', JSON.stringify(cart));
-
         console.log(`Add to the cart: ${name} (ID: ${id}, Price: ${price} Kč, Weight: ${weight}g)`);
-        renderCart(JSON.parse(localStorage.getItem('cart')));
+        renderCart(JSON.parse(localStorage.getItem('cart')), cartDisplay);
     }
 });
 
 
-function renderCart(cakesFromLocalStorage) {
-    const cartDisplay = document.getElementById('cart-display-container');
+export function renderCart(cakesFromLocalStorage, cartDisplay) {
+    if (!cartDisplay) {
+        console.error("Element cart-display-container not found.");
+        return;
+    }
+
     cartDisplay.innerHTML = ''; // clear before rendering
 
     let totalPrice = 0;
@@ -40,7 +44,7 @@ function renderCart(cakesFromLocalStorage) {
 
         const imgCakeCart = document.createElement('img');
         imgCakeCart.src = `./assets/cakes/${cake.id}.jpg`;
-        imgCakeCart.alt = cake.name[userLang];
+        imgCakeCart.alt = cake.name;
         cakeCardCart.appendChild(imgCakeCart);
 
         const basicInfoAboutCake = document.createElement('div');
@@ -97,30 +101,51 @@ function renderCart(cakesFromLocalStorage) {
     totalAmountPrice.innerText = `${totalPrice} Kč`;
     totalAmount.appendChild(totalAmountPrice);
 
-    const completeOrderButton = document.createElement('button');
-    completeOrderButton.id = 'complete-order';
-    completeOrderButton.textContent = 'Complete order';
-    completeOrderButton.addEventListener("click", () => {
+    if (window.location.pathname.includes('index.html')) {
+        const completeOrderButton = document.createElement('button');
+        completeOrderButton.id = 'complete-order';
+        completeOrderButton.textContent = 'Complete order';
+        completeOrderButton.addEventListener("click", () => {
+            window.location.href = './order.html';
+        })
+        completeOrderButton.setAttribute('data-i18n', 'complete_order');
+        cartDisplay.appendChild(completeOrderButton);
+    }
 
-    })
-    completeOrderButton.setAttribute('data-i18n', 'complete_order');
-    cartDisplay.appendChild(completeOrderButton);
+
+    if(totalPrice === 0) {
+        cartDisplay.innerHTML = '';
+
+        const emptyCart = document.createElement('div');
+        emptyCart.classList.add('empty-cart');
+        cartDisplay.appendChild(emptyCart);
+
+        const cartIsEpmthyText = document.createElement('span');
+        cartIsEpmthyText.setAttribute('data-i18n', 'cart_is_empthy');
+        cartIsEpmthyText.innerText = "Your cart is empty";
+        emptyCart.appendChild(cartIsEpmthyText);
+
+        const totalAmount = document.createElement('div');
+        totalAmount.id = 'total-amount';
+        cartDisplay.appendChild(totalAmount);
+
+        const totalAmountText = document.createElement('p');
+        totalAmountText.setAttribute('data-i18n', 'total_amount');
+        totalAmountText.innerText = 'Total order amount: ';
+        totalAmount.appendChild(totalAmountText);
+
+        const totalAmountPrice = document.createElement('span');
+        totalAmountPrice.innerText = `${totalPrice} Kč`;
+        totalAmount.appendChild(totalAmountPrice);
+    }
 }
 
 const cakes = JSON.parse(localStorage.getItem('cart'));
-console.log(cakes);
+//console.log(cakes);
 
-renderCart(cakes);
+// renderCart(cakes, cartDisplay);
 
-
-
-/*
-const buttonReduceAmount = document.getElementById('button-reduce');
-buttonReduceAmount.addEventListener('click', () => {
-    console.log(true);
-
-})
-*/
+let userLang = localStorage.getItem('lang') || 'en';
 
 function handleReduce(event) {
     const id = event.target.dataset.id;
@@ -138,7 +163,8 @@ function handleReduce(event) {
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
-    renderCart(cart);
+    renderCart(cart, cartDisplay);
+    translatePage(userLang);
 }
 
 function handleIncrease(event) {
@@ -153,5 +179,7 @@ function handleIncrease(event) {
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
-    renderCart(cart);
+    renderCart(cart, cartDisplay);
+    translatePage(userLang);
 }
+

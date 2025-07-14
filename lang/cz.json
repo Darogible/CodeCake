@@ -52,5 +52,46 @@
   "sign_up_error": "⚠️ Opravte prosím chyby ve formuláři",
   "alertErrorBox": "🟢 Registrace byla úspěšná! 🟢",
   "greeting_phrase": "Ahoj, ",
-  "log_in_error": "Neplatný e-mail nebo heslo"
+  "log_in_error": "Neplatný e-mail nebo heslo",
+  "back_button": "← Zpět na hlavní stránku",
+  "order_header": "Potvrďte svou objednávku",
+  "date_of_order": "Vyberte datum vyzvednutí objednávky: ",
+  "proceed_to_payment": "Přejít k platbě",
+  "total_amount": "Celková částka: ",
+  "complete_order": "Dokončit objednávku",
+  "footer_copyright": "© 2025 CodeCake – výukový projekt",
+  "footer_our_tel": "Pro objednání volejte: ",
+  "footer_customer_tel": "Nebo zanechte své číslo, zavoláme vám zpět: ",
+  "send_to_us": "Odeslat",
+  "write_to_us": "Sledujte nás na sociálních sítích: ",
+  "my_account_button": "Můj účet",
+  "log-out_button": "Odhlásit se",
+  "pickup_days": "Vyzvednutí je možné každý den kromě neděle.",
+  "pickup_hours": "Otevírací doba: 8:00–17:00.",
+  "payment_title": "Platba za objednávku",
+  "card_warming": "⚠️ Toto je ukázkový web. Nezadávejte skutečné údaje o kartě. ⚠️",
+  "payment_note": "Zadejte náhodná čísla. Fungují všechny karty kromě",
+  "payment_description": "Platba kartou",
+  "card_number": "Číslo karty",
+  "card_date": "Platnost",
+  "card_cvv": "CVV",
+  "cart_is_empty": "Váš košík je prázdný",
+  "profile_history": "Historie vašich objednávek",
+  "profile_history_missing": "Zde se zobrazí vaše historie nákupů",
+  "order_detail_title": "Detail objednávky",
+  "order_detail_id": "Číslo vaší objednávky ",
+  "order_detail_date": "Vytvořeno: ",
+  "goods_in_order": "Dorty v objednávce",
+  "total_order_amount": "Celková částka objednávky: ",
+  "additional_info": "Doplňující informace k objednávce:",
+  "additional_info_pickup": "Datum vyzvednutí: ",
+  "additional_info_name": "Jméno zákazníka: ",
+  "additional_info_telephoneNumber": "Telefonní číslo: "
+
+
+
+
+
+
+
 }

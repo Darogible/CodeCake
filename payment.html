@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css?v=1.0">
+    <link rel="stylesheet" href="styles/dark.css" id="dark-style" disabled>
+    <link rel="stylesheet" href="styles/order.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <title>Payment</title>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a class="header-logo" href="./index.html">
+            <img src="./assets/codeCake2.png" alt="CodeCake logo">
+            <span>CodeCake</span>
+        </a>
+    </div>
+
+    <button id="back-to-order" class="back-button"  data-i18n="back_to_order_button">🡠 Back to order page</button>
+</header>
+
+<main class="main-payment">
+    <h2 data-i18n="payment_title" class="payment-header">Payment for the order</h2>
+
+    <p class="payment-description">
+        <span class="card-warning" data-i18n="card_warming">⚠️ This is a demo site.
+        Don’t use real card details. ⚠️ </span> <br>
+        <span data-i18n="payment_note"> Enter random numbers. All cards work except </span> <br>
+        <span class="except-card"> 0000 0000 0000 0000 </span>
+    </p>
+
+    <form class="payment-form">
+        <p data-i18n="payment_description">Payment by card</p>
+
+        <div>
+            <label for="card-number" data-i18n="card_number">Number card</label>
+            <input id="card-number" type="text" placeholder="1234 1000 2222 4040" maxlength="19" required>
+        </div>
+
+        <div class="card-details">
+            <div class="card-date" >
+                <label for="card-date" data-i18n="card_date">Validity period</label>
+                <input id="card-date" type="text" placeholder="MM/YY" maxlength="5" required>
+            </div>
+            <div class="card-cvv" >
+                <label for="card-cvv">CVV</label>
+                <div class="card-cvv-container">
+                    <input id="card-cvv" type="number" maxlength="4" value="777" readonly>
+                    <div class="info-icon" id="cvv-info">!
+                        <div class="cvv-tooltip visually-hidden" id="cvv-tooltip" data-i18n="cvv_tooltip">
+                            For security purposes, CVV input is disabled (training site)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class=visually-hidden" id="payment-data-error">
+            <span data-i18n="payment_error_text">Error in card data</span>
+        </div>
+
+        <!-- type="submit" -->
+        <button
+                type="submit"
+                id="payment-button"
+                data-i18n="payment_button"
+                class="payment-button">Pay</button>
+
+    </form>
+
+
+</main>
+
+<div id="loading" class="visually-hidden">
+    <p>Payment verification in progress...</p>
+    <div class="loader"></div>
+</div>
+<div id="success-payment" class="visually-hidden payment-result" data-i18n="payment_success">
+    ✅ Payment successfully confirmed!
+</div>
+<div id="fail-payment" class="visually-hidden payment-result" data-i18n="fail_payment">
+    ❌ Payment failed. Please try again.
+</div>
+
+
+
+<footer>
+    <div class="footer-container">
+        <p data-i18n="footer_copyright"> &copy; 2025 CodeCake – self-educational project</p>
+        <div class="footer-socials">
+            <p data-i18n="write_to_us">Follow us on our social networks: </p>
+            <div class="footer-socials-container">
+                <a href="https://github.com/Darogible" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/andrei-afanasev-a25884350/" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+    <script type="module" src="./scripts/main.js" defer></script>
+    <script type="module" src="./scripts/order.js" defer></script>
+    <script type="module" src="./scripts/payment.js" defer></script>
+    <script type="module" src="./scripts/i18n.js"></script>
+
+    <!-- Flatpickr -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/cs.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js"></script>
+</body>
+</html>

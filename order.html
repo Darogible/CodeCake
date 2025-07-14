@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/main.css?v=1.0">
+  <link rel="stylesheet" href="styles/dark.css" id="dark-style" disabled>
+  <link rel="stylesheet" href="styles/order.css">
+  <!-- Flatpickr CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <title>Order</title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a class="header-logo" href="./index.html">
+        <img src="./assets/codeCake2.png" alt="CodeCake logo">
+        <span>CodeCake</span>
+      </a>
+    </div>
+
+    <button onclick="window.history.back()" class="back-button"  data-i18n="back_button">🡠 Back to main page</button>
+  </header>
+  <main>
+    <h2 class="order-header" data-i18n="order_header">Confirm your order</h2>
+    <div id="cart-display-container" class="order-cart">
+      <!-- via JS -->
+    </div>
+    <div class="info-about-order">
+      <div class="info-order">
+        <p data-i18n="full_name">What is your full name?</p>
+        <input
+                id="name-and-surname-input"
+                data-i18n-placeholder="name_and_surname_input"
+                type="text"
+                placeholder="Name and surname"
+        >
+        <div id="control-name" class="visually-hidden control-input-correctness"></div>
+      </div>
+      <div class="info-order">
+        <p data-i18n="email_address">Email Address</p>
+        <input
+                id="sign-up-email-input"
+                data-i18n-placeholder="sign_up_email"
+                type="email"
+                placeholder="example@gmail.com"
+        >
+        <div id="control-email" class="visually-hidden control-input-correctness"></div>
+      </div>
+      <div class="info-order">
+        <p data-i18n="telephone_number">Phone Number (optional)</p>
+        <input
+                id="telephone-number-input"
+                type="tel"
+                placeholder="+420 555 777 888"
+        >
+        <div id="control-telephone-number" class="visually-hidden control-input-correctness"></div>
+      </div>
+      <div class="date-of-order">
+        <p class="working-hours">
+          <span data-i18n="pickup_days">We are open for pickup every day except Sundays.</span><br>
+          <span data-i18n="pickup_hours">Pickup hours: 8:00–17:00</span>
+        </p>
+        <label for="date-input" data-i18n="date_of_order">Select the date of order pickup</label>
+        <input
+                id="date-input"
+                placeholder="DD/MM/YYYY"
+        >
+        <div id="control-date-of-order" class="visually-hidden control-input-correctness"></div>
+      </div>
+    </div>
+    <button id="proceed-to-payment" data-i18n="proceed_to_payment">
+      Proceed to payment
+    </button>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <p data-i18n="footer_copyright"> &copy; 2025 CodeCake – self-educational project</p>
+      <div class="footer-socials">
+        <p data-i18n="write_to_us">Follow us on our social networks: </p>
+        <div class="footer-socials-container">
+          <a href="https://github.com/Darogible" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/andrei-afanasev-a25884350/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+  <script src="./scripts/i18n.js" defer></script>
+  <script type="module" src="./scripts/main.js" defer></script>
+  <script type="module" src="./scripts/cart.js" defer></script>
+  <script type="module" src="./scripts/order.js"></script>
+  <script type="module" src="./scripts/register.js"></script>
+  <script type="module" src="./scripts/i18n.js"></script>
+  <!-- Flatpickr JS -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <!-- Czech and Russian localization -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/cs.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js"></script>
+</html>
