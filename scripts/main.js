@@ -6,6 +6,7 @@ const logoImg = document.querySelector('.header-logo img');
 
 if (!localStorage.getItem('lang')) {
     localStorage.setItem('lang', 'en');
+    translatePage('en');
 }
 
 /*
