@@ -66,6 +66,7 @@ function startVerification() {
         loading.classList.remove('visually-hidden');
 
         let delay = Math.floor(Math.random() * (5000 - 1500 + 1)) + 1500;
+        delay = 500;
         // console.log("delay is: ", delay);
         setTimeout(() => {
             loading.classList.add('visually-hidden');
@@ -118,10 +119,11 @@ function relustOfPayment() {
         successPayment.classList.add('visually-hidden');
 
         if (isSuccess) {
-            window.location.href = './index.html';
+            //window.location.href = './index.html';
             createCompletedOrder();
+            showPaidOrders();
         }
-    }, 3000);
+    }, 300);
 }
 
 
@@ -136,8 +138,9 @@ document.addEventListener('click', () => {
     }
 });
 
-//cardNumber.value = "1000 1000 1000 1000";
-//cardDate.value = "01/30";
+cardNumber.value = "1000 1000 1000 1000";
+cardDate.value = "01/30";
+let newId;
 
 function createCompletedOrder() {
     const now = new Date();
@@ -153,6 +156,11 @@ function createCompletedOrder() {
 
     const orderData = JSON.parse(localStorage.getItem("orderData"));
 
+    if (!orderData) {
+        console.error("orderData is missing or corrupted in localStorage");
+        return;
+    }
+
     if(orderHistory === null || orderHistory === undefined) {
         const newOrderInHistory = {
             id: 1,
@@ -164,10 +172,10 @@ function createCompletedOrder() {
             totalAmount: orderData.totalAmount,
             items: orderData.items
         }
-        console.log("(1) newOrderInHistory is: ", newOrderInHistory);
+        // console.log("(1) newOrderInHistory is: ", newOrderInHistory);
         localStorage.setItem('orderHistory', JSON.stringify([newOrderInHistory]));
     } else {
-        let newId = orderHistory.length + 1;
+        newId = orderHistory.length + 1;
         console.log("newId is: ", newId);
 
         const newOrderInHistory = {
@@ -180,14 +188,31 @@ function createCompletedOrder() {
             totalAmount: orderData.totalAmount,
             items: orderData.items
         }
-        console.log("(2) newOrderInHistory is: ", newOrderInHistory);
+        //console.log("(2) newOrderInHistory is: ", newOrderInHistory);
         orderHistory.push(newOrderInHistory);
         localStorage.setItem('orderHistory', JSON.stringify(orderHistory));
     }
-    console.log("orderHistory is: ", orderHistory);
+    //console.log("orderHistory is: ", orderHistory);
     localStorage.removeItem("cart");
     localStorage.removeItem("orderData");
 }
+
+
+localStorage.setItem("lastOrderId", newId ?? 1); // if this is the first order
+
+
+function showPaidOrders() {
+    console.log("aaa");
+    let idToRedirect = newId || localStorage.getItem("lastOrderId");
+    if (!idToRedirect) {
+        alert("There was an issue with your order. Please check your email.");
+        return;
+    }
+    window.location.href = `order-detail.html?id=${idToRedirect}`;
+
+
+}
+
 
 
 const theme = localStorage.getItem("theme");

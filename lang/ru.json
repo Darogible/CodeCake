@@ -86,12 +86,17 @@
   "additional_info": "Дополнительная информация о заказе:",
   "additional_info_pickup": "Дата самовывоза: ",
   "additional_info_name": "Имя клиента: ",
-  "additional_info_telephoneNumber": "Номер телефона: "
-
-
-
-
-
+  "additional_info_telephoneNumber": "Номер телефона: ",
+  "cvv_tooltip": "В целях безопасности ввод CVV отключён (учебный сайт)",
+  "missing_telephone_number": "(не был указан)",
+  "quantity": "Количество: ",
+  "price_per": "Цена за единицу: ",
+  "final_price": "Итого: ",
+  "order_status": "Статус заказа: ",
+  "order_paid": "Оплачен",
+  "account_question_start": "Ещё нет аккаунта? ",
+  "account_question_sign_up": "Зарегистрируйтесь",
+  "account_question_end": "и удобно управляйте историей своих покупок"
 
 
 }

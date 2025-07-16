@@ -52,13 +52,17 @@ if(profileHistory && profileHistoryMissing) {
         historyTotal.setAttribute('data-i18n', 'history_total');
         historyTableTitleContainer.appendChild(historyTotal);
 
+        const orderCardContainer = document.createElement('div');
+        orderCardContainer.classList.add('order-card-container');
+        profileHistory.appendChild(orderCardContainer);
+
         orderHistory.forEach(order => {
             // console.log(userData.email, " + ", order.email);
             if(userData.email === order.email) {
                 const orderCard = document.createElement('div');
                 orderCard.classList.add('order-card');
                 orderCard.id = 'order-card';
-                profileHistory.appendChild(orderCard);
+                orderCardContainer.appendChild(orderCard);
 
                 const idOrder = document.createElement('span');
                 idOrder.innerText = order.id;

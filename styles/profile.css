@@ -58,7 +58,7 @@
     font-size: 0.75rem;
     padding: 0.2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20rem;
+    margin-bottom: 25rem;
 }
 
 .profile-history-container h3 {
@@ -87,9 +87,22 @@
     gap: 0.2rem;
 }
 
+.order-card-container {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 .history-title-table {
     text-align: center;
     font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.order-paid {
+    background-color: #dff0d8;
+    color: #3c763d;
+    padding: 0.05rem 0.5rem;
+    border-radius: 12px;
     font-weight: bold;
 }
 
@@ -154,7 +167,7 @@
 
 .order-details {
     width: 300px;
-    padding-inline: 1rem;
+    margin-inline: 2rem;
 }
 
 #order-date, #order-id {
@@ -169,6 +182,7 @@
     background-color: var(--second-background-color);
     margin: 0.5rem;
     border-radius: 12px;
+    margin-inline: 2rem;
 }
 
 .goods-in-order-list {
@@ -229,7 +243,7 @@
 
 .additional-info {
     padding: 1rem;
-    margin-bottom: 12rem;
+    margin-bottom: 1rem;
 }
 
 .total {
@@ -237,8 +251,33 @@
     font-weight: bold;
     display: flex;
     justify-content: space-between;
+    margin-inline: 2rem;
 }
 
 .additional-info h4 {
     font-size: 1.1rem;
+}
+
+.empty-distance {
+    height: 20rem;
+}
+
+.account-question {
+    margin: 1rem 2rem;
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    background-color: var(--second-background-color);
+    border-radius: 10px;
+}
+
+.account-question a {
+    color: blue;
+    font-weight: bold;
+}
+
+.footer-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }

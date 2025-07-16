@@ -17,7 +17,7 @@
             </a>
         </div>
 
-        <button onclick="window.history.back()" class="back-button"  data-i18n="back_button">🡠 Back to main page</button>
+        <button id="order-detail-back-button" class="back-button"  data-i18n="back_button">🡠 Back to main page</button>
     </header>
 
     <main>
@@ -31,6 +31,10 @@
             <div>
                 <span data-i18n="order_detail_date">Create: </span>
                 <span id="order-date"></span>
+            </div>
+            <div>
+                <span data-i18n="order_status" class="order-status">Order Status: </span>
+                <span data-i18n="order_paid" class="order-paid">Paid</span>
             </div>
         </div>
 
@@ -62,8 +66,15 @@
             </div>
         </div>
 
+        <div class="account-question visually-hidden">
+            <span data-i18n="account_question_start">Don't have an account yet? </span>
+            <a data-i18n="account_question_sign_up" href="./index.html" onclick="openRegisterAfterRedirect()">Sign up</a>
+            <span data-i18n="account_question_end">and conveniently manage your purchase history</span>
+        </div>
 
+        <div class="empty-distance"></div>
     </main>
+
 
     <footer class="order-detail-footer">
         <div class="footer-container">

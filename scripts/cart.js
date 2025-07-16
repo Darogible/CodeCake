@@ -1,3 +1,5 @@
+let userLang = localStorage.getItem('lang') || 'en';
+
 // I record all clicks on the page, if there is one on the 'add-to-cart' I need, then I save it in localStorage
 const cartDisplay = document.getElementById('cart-display-container');
 
@@ -5,7 +7,8 @@ document.addEventListener('click', function(event) {
     if (event.target.classList.contains('add-to-cart')) {
         const button = event.target;
         const id = button.dataset.id;
-        const name = button.dataset.name;
+        const namesObject = JSON.parse(button.dataset.name)
+        const name = namesObject[userLang];
         const price = button.dataset.price;
         const weight = button.dataset.weight;
 
@@ -18,15 +21,14 @@ document.addEventListener('click', function(event) {
         if (existingCake) {
             existingCake.quantity += 1;
         } else {
-            cart.push({id, name, price, weight, quantity: 1});
+            cart.push({id, name, namesObject, price, weight, quantity: 1});
         }
 
         localStorage.setItem('cart', JSON.stringify(cart));
-        console.log(`Add to the cart: ${name} (ID: ${id}, Price: ${price} Kč, Weight: ${weight}g)`);
+        //console.log(`Add to the cart: ${name} (ID: ${id}, Price: ${price} Kč, Weight: ${weight}g)`);
         renderCart(JSON.parse(localStorage.getItem('cart')), cartDisplay);
     }
 });
-
 
 export function renderCart(cakesFromLocalStorage, cartDisplay) {
     if (!cartDisplay) {
@@ -50,9 +52,9 @@ export function renderCart(cakesFromLocalStorage, cartDisplay) {
         const basicInfoAboutCake = document.createElement('div');
         basicInfoAboutCake.classList.add('basic-info-cake');
         cakeCardCart.appendChild(basicInfoAboutCake);
-
         const nameCakeCart = document.createElement('span');
-        nameCakeCart.innerText = cake.name;
+        nameCakeCart.innerText = cake.namesObject[userLang];
+
         basicInfoAboutCake.appendChild(nameCakeCart);
 
         const weightAndPriceOfCake = document.createElement('span');
@@ -121,7 +123,7 @@ export function renderCart(cakesFromLocalStorage, cartDisplay) {
         cartDisplay.appendChild(emptyCart);
 
         const cartIsEpmthyText = document.createElement('span');
-        cartIsEpmthyText.setAttribute('data-i18n', 'cart_is_empthy');
+        cartIsEpmthyText.setAttribute('data-i18n', 'cart_is_empty');
         cartIsEpmthyText.innerText = "Your cart is empty";
         emptyCart.appendChild(cartIsEpmthyText);
 
@@ -138,14 +140,12 @@ export function renderCart(cakesFromLocalStorage, cartDisplay) {
         totalAmountPrice.innerText = `${totalPrice} Kč`;
         totalAmount.appendChild(totalAmountPrice);
     }
+    translatePage(userLang);
 }
 
 const cakes = JSON.parse(localStorage.getItem('cart'));
 //console.log(cakes);
 
-// renderCart(cakes, cartDisplay);
-
-let userLang = localStorage.getItem('lang') || 'en';
 
 function handleReduce(event) {
     const id = event.target.dataset.id;

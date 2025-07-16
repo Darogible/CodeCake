@@ -86,12 +86,15 @@
   "additional_info": "Doplňující informace k objednávce:",
   "additional_info_pickup": "Datum vyzvednutí: ",
   "additional_info_name": "Jméno zákazníka: ",
-  "additional_info_telephoneNumber": "Telefonní číslo: "
-
-
-
-
-
-
-
+  "additional_info_telephoneNumber": "Telefonní číslo: ",
+  "cvv_tooltip": "Z bezpečnostních důvodů je zadávání CVV zakázáno (výukový web)",
+  "missing_telephone_number": "(nebylo uvedeno)",
+  "quantity": "Počet: ",
+  "price_per": "Cena za kus: ",
+  "final_price": "Celkem: ",
+  "order_status": "Stav objednávky: ",
+  "order_paid": "Zaplaceno",
+  "account_question_start": "Ještě nemáte účet? ",
+  "account_question_sign_up": "Zaregistrujte se",
+  "account_question_end": "a pohodlně spravujte historii svých nákupů"
 }

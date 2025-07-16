@@ -199,3 +199,16 @@ if(signUpButtonLoginForm) {
         signUpContainer.classList.remove('visually-hidden');
     });
 }
+
+
+// open the registration form if the user clicked "Sign up" while viewing his order
+document.addEventListener("DOMContentLoaded", () => {
+    if (sessionStorage.getItem("openSignUp") === "true") {
+        const signUpContainer = document.getElementById("sign-up-container");
+        if (signUpContainer) {
+            signUpContainer.classList.remove("visually-hidden");
+        }
+        sessionStorage.removeItem("openSignUp");
+    }
+});
+

@@ -80,13 +80,16 @@
   "additional_info": "Additional order information:",
   "additional_info_pickup": "Pickup date: ",
   "additional_info_name": "Customer's name: ",
-  "additional_info_telephoneNumber": "Telephone number: "
-
-
-
-
-
-
-
+  "additional_info_telephoneNumber": "Telephone number: ",
+  "cvv_tooltip": "For security purposes, CVV input is disabled (training site)",
+  "missing_telephone_number": "(was not provided)",
+  "quantity": "Amount: ",
+  "price_per": "Price per: ",
+  "final_price": "Total: ",
+  "order_status": "Order Status: ",
+  "order_paid": "Paid",
+  "account_question_start": "Don't have an account yet? ",
+  "account_question_sign_up": "Sign up",
+  "account_question_end": "and conveniently manage your purchase history"
 
 }

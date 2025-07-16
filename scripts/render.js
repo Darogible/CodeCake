@@ -18,9 +18,9 @@ function renderCardsOfCakes(cakesData) {
         cakeCard.appendChild(img);
 
         // get cake name with translation
-        const name = cake.name[userLang];
+        const names = cake.name;
         const title = document.createElement('h3');
-        title.textContent = name; // already localized cake name
+        title.textContent = names[userLang]; // localized cake name
         title.classList.add('title');
         cakeCard.appendChild(title);
 
@@ -68,7 +68,7 @@ function renderCardsOfCakes(cakesData) {
         cakeCard.appendChild(addToCartButton);
         /* add all important data about THIS cake to the button */
         addToCartButton.dataset.id = cake.id;
-        addToCartButton.dataset.name = cake.name[userLang];
+        addToCartButton.dataset.name = JSON.stringify(cake.name);
         addToCartButton.dataset.filling = cake.filling;
         addToCartButton.dataset.price = cake.price;
         addToCartButton.dataset.weight = cake.weight;

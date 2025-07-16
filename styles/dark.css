@@ -28,6 +28,7 @@ header, .footer-container {
     color: white;
 }
 
+
 .sidebar-filters, .cake-card,.search-cake input, .card-cart, .sign-up-container, .log-in-container {
     background-color: var(--dark-theme-background);
 }
@@ -45,10 +46,14 @@ header, .footer-container {
     fill: white;
 }
 
-.cart-display-container, #loading, .payment-result, .profile-history-container {
+.cart-display-container, #loading, .payment-result, .lang-dropdown {
     background-color: rgb(30, 30, 30);
     box-shadow: -4px 4px 8px rgba(255, 255, 255, 0.23);
 }
 
 
+.profile-history-container, .goods-in-order, .account-question {
+    background-color: rgb(30, 30, 30) !important;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.4) !important;
+}
 

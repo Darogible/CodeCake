@@ -1,3 +1,4 @@
+
 function cleanOldFormSignUp() {
 // Clear all fields
     nameAndSurnameInput.value = '';
@@ -275,6 +276,4 @@ function successCreateAccount() {
     setTimeout(() => {
         alertBox.remove();
     }, 1000);
-
-
 }
