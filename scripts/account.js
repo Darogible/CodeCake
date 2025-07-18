@@ -38,6 +38,7 @@ if(logInButton) {
         if(controlAccount(email, password)) {
             //console.log("Successful login to account");
             displayAccount();
+            localStorage.removeItem('hasLoggedOutBefore');
             logInContainer.classList.add('visually-hidden');
         } else {
             logInError.classList.remove('visually-hidden');
@@ -104,16 +105,25 @@ function displayAccount() {
     logOutButton.addEventListener("click", () => {
         newAccountContainer.classList.add('visually-hidden');
         accountContainer.classList.remove('visually-hidden');
+        // helps to avoid automatic login to the account if the user has logged out
+        localStorage.setItem('hasLoggedOutBefore', 'true');
     });
     newAccountContainer.appendChild(logOutButton);
 
     translatePage(localStorage.getItem('lang'));
 }
 
+
+
+
 // if the user already has an account, the login will be automatic
 if(userData && Object.keys(userData).length > 0) {
-    displayAccount();
-    logInContainer.classList.add('visually-hidden');
+    // helps to avoid automatic login to the account if the user has logged out
+    let hasLoggedOutBefore = localStorage.getItem('hasLoggedOutBefore');
+    if(!hasLoggedOutBefore === true) {
+        displayAccount();
+        logInContainer.classList.add('visually-hidden');
+    }
 }
 
 

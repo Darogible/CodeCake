@@ -96,5 +96,11 @@
   "order_paid": "Zaplaceno",
   "account_question_start": "Ještě nemáte účet? ",
   "account_question_sign_up": "Zaregistrujte se",
-  "account_question_end": "a pohodlně spravujte historii svých nákupů"
+  "account_question_end": "a pohodlně spravujte historii svých nákupů",
+  "back_to_order_button": "🡠 Zpět na stránku objednávky",
+  "payment_error_text": "Chyba v údajích o kartě",
+  "payment_button": "Zaplatit",
+  "payment_success": "✅ Platba byla úspěšně potvrzena!",
+  "fail_payment": "❌ Platba se nezdařila. Zkuste to prosím znovu."
+
 }

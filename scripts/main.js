@@ -212,3 +212,29 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+
+// full reset local storage for testing from scratch
+const resetButton = document.getElementById("reset-button");
+const confirmResetButton = document.getElementById("confirm-reset-button");
+const cancelResetButton = document.getElementById("cancel-reset-button");
+
+if(resetButton) {
+    resetButton.addEventListener("click", () => {
+        const resetConfirmation = document.querySelector(".reset-confirmation");
+        resetConfirmation.classList.remove('visually-hidden');
+        navBar.classList.toggle('visually-hidden');
+        burgerButton.textContent = '☰';
+
+        confirmResetButton.addEventListener("click", () => {
+            localStorage.clear();
+            location.reload();
+            resetConfirmation.classList.add('visually-hidden');
+        });
+
+        cancelResetButton.addEventListener("click", () => {
+            resetConfirmation.classList.add('visually-hidden');
+        })
+    })
+}
+
+

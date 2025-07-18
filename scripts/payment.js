@@ -66,7 +66,6 @@ function startVerification() {
         loading.classList.remove('visually-hidden');
 
         let delay = Math.floor(Math.random() * (5000 - 1500 + 1)) + 1500;
-        delay = 500;
         // console.log("delay is: ", delay);
         setTimeout(() => {
             loading.classList.add('visually-hidden');
@@ -119,11 +118,10 @@ function relustOfPayment() {
         successPayment.classList.add('visually-hidden');
 
         if (isSuccess) {
-            //window.location.href = './index.html';
             createCompletedOrder();
             showPaidOrders();
         }
-    }, 300);
+    }, 3000);
 }
 
 
@@ -138,8 +136,8 @@ document.addEventListener('click', () => {
     }
 });
 
-cardNumber.value = "1000 1000 1000 1000";
-cardDate.value = "01/30";
+//cardNumber.value = "1000 1000 1000 1000";
+//cardDate.value = "01/30";
 let newId;
 
 function createCompletedOrder() {

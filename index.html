@@ -66,6 +66,12 @@
           <li data-lang="ru">Русский</li>
         </ul>
       </div>
+      <div>
+        <button data-i18n="reset_to_default" class="reset-button" id="reset-button">
+          Reset to default
+        </button>
+      </div>
+
     </nav>
   </header>
 
@@ -75,6 +81,7 @@
         <div class="search-input">
           <input
                   type="text"
+                  id="search-input"
                   data-i18n-placeholder="search_cake_placeholder"
                   placeholder="Search a cake"
           />
@@ -233,12 +240,24 @@
     </div>
     <div>
       <p data-i18n="password">Password</p>
-      <input
-              id="sign-up-password-input"
-              data-i18n-placeholder="sign_up_password"
-              type="password"
-              placeholder="Enter your password"
-      >
+      <div class="password-input-container">
+        <input
+                id="sign-up-password-input"
+                data-i18n-placeholder="sign_up_password"
+                type="password"
+                placeholder="Enter your password"
+        >
+        <!--
+        <button id="password-visually-hidden">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 12C3.5 7 8 4 12 4C16 4 20.5 7 23 12C20.5 17 16 20 12 20C8 20 3.5 17 1 12Z"
+                  stroke="black" stroke-width="2" fill="none"/>
+            <circle cx="12" cy="12" r="3" stroke="black" stroke-width="2" fill="black"/>
+          </svg>
+        </button>
+        -->
+      </div>
       <div id="strength-password" class="visually-hidden control-input-correctness"></div>
     </div>
     <div>
@@ -262,6 +281,17 @@
     </div>
     <div class="sign-up-error visually-hidden" data-i18n="sign_up_error">⚠️ Please correct the errors in the form</div>
     <button data-i18n="sign_up_button" id="sign-up-button">Sign Up</button>
+  </div>
+
+  <div class="reset-confirmation visually-hidden">
+    <div>
+      <p data-i18n="reset_confirmation_message">Are you sure you want to reset?
+        All account data, purchases, and other settings will be permanently deleted.</p>
+    </div>
+    <div class="reset-confirmation-buttons">
+      <button data-i18n="confirm_reset_button" id="confirm-reset-button">Reset</button>
+      <button data-i18n="cancel_reset_button" id="cancel-reset-button">Cancel</button>
+    </div>
   </div>
 
 

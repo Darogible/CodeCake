@@ -71,3 +71,33 @@ applyFiltersButton.addEventListener("click", () => {
 })
 
 
+// search input handler
+const searchInput = document.getElementById("search-input");
+const cardsOfCakes = document.querySelectorAll('.cake-card');
+console.log(cardsOfCakes);
+
+if(searchInput) {
+    searchInput.addEventListener("input", () => {
+        const searchText = searchInput.value.toLowerCase();
+        console.log("Input clicked");
+
+        document.querySelectorAll('.cake-card').forEach((card) => {
+            console.log(card);
+            const title = card.querySelector('.title').textContent.toLowerCase().trim();
+            const words = title.split(/\s+/); // split by spaces
+            // Check if at least one word starts with the entered text
+            const matches = words.some(word => word.startsWith(searchText));
+
+            if (matches) {
+                card.classList.remove('visually-hidden');
+            } else {
+                card.classList.add('visually-hidden');
+            }
+
+        });
+
+    });
+}
+
+
+

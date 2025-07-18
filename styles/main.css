@@ -189,7 +189,7 @@ header.no-shadow {
     margin: 0.2rem;
 }
 
-.account-button, .new-account-button, #my-account-button, #log-out-button {
+.account-button, .new-account-button, #my-account-button, #log-out-button, .reset-button{
     border-radius: 12px;
     border: none;
     background-color: var(--main-button-color);
@@ -199,6 +199,46 @@ header.no-shadow {
 }
 
 #log-out-button {
+    background-color: var(--second-button-color);
+}
+
+.reset-button {
+    background-color: var(--second-button-color);
+    margin-bottom: 1rem;
+}
+
+.reset-confirmation {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--second-background-color);
+    width: 300px;
+    padding: 2rem 1rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.reset-confirmation-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+#confirm-reset-button, #cancel-reset-button {
+    border-radius: 12px;
+    border: none;
+    padding: 0.5rem 0.8rem;
+}
+
+#confirm-reset-button {
+    background-color: var(--main-button-color);
+}
+
+#cancel-reset-button {
     background-color: var(--second-button-color);
 }
 

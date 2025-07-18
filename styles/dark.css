@@ -46,7 +46,7 @@ header, .footer-container {
     fill: white;
 }
 
-.cart-display-container, #loading, .payment-result, .lang-dropdown {
+.cart-display-container, #loading, .payment-result, .lang-dropdown, .reset-confirmation {
     background-color: rgb(30, 30, 30);
     box-shadow: -4px 4px 8px rgba(255, 255, 255, 0.23);
 }

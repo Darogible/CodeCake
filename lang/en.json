@@ -90,6 +90,13 @@
   "order_paid": "Paid",
   "account_question_start": "Don't have an account yet? ",
   "account_question_sign_up": "Sign up",
-  "account_question_end": "and conveniently manage your purchase history"
+  "account_question_end": "and conveniently manage your purchase history",
+  "back_to_order_button": "🡠 Back to order page",
+  "payment_error_text": "Error in card data",
+  "payment_button": "Pay",
+  "payment_success": "✅ Payment successfully confirmed!",
+  "fail_payment": "❌ Payment failed. Please try again."
+
+
 
 }
