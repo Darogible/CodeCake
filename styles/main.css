@@ -944,6 +944,20 @@ main {
     padding: 1rem 2rem;
 }
 
+#cart-count {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background-color: #f55050;
+    color: white;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 

@@ -2,6 +2,7 @@ let userLang = localStorage.getItem('lang') || 'en';
 
 // I record all clicks on the page, if there is one on the 'add-to-cart' I need, then I save it in localStorage
 const cartDisplay = document.getElementById('cart-display-container');
+const cartCount = document.getElementById('cart-count');
 
 document.addEventListener('click', function(event) {
     if (event.target.classList.contains('add-to-cart')) {
@@ -27,8 +28,30 @@ document.addEventListener('click', function(event) {
         localStorage.setItem('cart', JSON.stringify(cart));
         //console.log(`Add to the cart: ${name} (ID: ${id}, Price: ${price} Kč, Weight: ${weight}g)`);
         renderCart(JSON.parse(localStorage.getItem('cart')), cartDisplay);
+
+        countOfCakesInCart();
     }
 });
+
+function countOfCakesInCart() {
+    const cartData = localStorage.getItem('cart');
+    let cartItems = [];
+    if (cartData) {
+        try {
+            cartItems = JSON.parse(cartData);
+        } catch (e) {
+            console.error("Cart parsing error", e);
+            cartItems = []; // fallback
+        }
+    }
+    const itemCount = cartItems.length; // the number of objects (cakes)
+    if(itemCount > 0) {
+        cartCount.classList.remove('visually-hidden');
+        cartCount.textContent = itemCount;
+    } else {
+        cartCount.classList.add('visually-hidden');
+    }
+}
 
 export function renderCart(cakesFromLocalStorage, cartDisplay) {
     if (!cartDisplay) {
@@ -165,6 +188,8 @@ function handleReduce(event) {
     localStorage.setItem('cart', JSON.stringify(cart));
     renderCart(cart, cartDisplay);
     translatePage(userLang);
+
+    countOfCakesInCart();
 }
 
 function handleIncrease(event) {
@@ -183,3 +208,7 @@ function handleIncrease(event) {
     translatePage(userLang);
 }
 
+const cartData = localStorage.getItem('cart');
+if(cartData) {
+    countOfCakesInCart();
+}
