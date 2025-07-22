@@ -129,8 +129,6 @@ function openRegisterAfterRedirect() {
     sessionStorage.setItem("openSignUp", "true");
 }
 
-const orderDa
-
 // Go to the main page
 document.getElementById('order-detail-back-button').addEventListener('click', function () {
     window.location.href = 'index.html';
