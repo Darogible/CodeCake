@@ -259,7 +259,7 @@
 }
 
 .empty-distance {
-    height: 20rem;
+    height: 30rem;
 }
 
 .account-question {
@@ -276,8 +276,9 @@
     font-weight: bold;
 }
 
-.footer-container {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+.order-detail-footer {
+
+
+
 }
+

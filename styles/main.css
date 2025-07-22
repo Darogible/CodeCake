@@ -205,6 +205,15 @@ header.no-shadow {
 .reset-button {
     background-color: var(--second-button-color);
     margin-bottom: 1rem;
+    padding: 0.4rem 1.8rem;
+}
+
+.reset-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .reset-confirmation {
@@ -542,6 +551,31 @@ input:checked + .slider-theme::before {
     background-color: var(--second-button-color);
 }
 
+.input-password-wrapper {
+    position: relative;
+}
+
+.password-visually-hidden {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
+svg {
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    display: block; /* убирает возможные inline-глюки */
+}
+
 
 .custom-alert {
     position: fixed;
@@ -565,6 +599,8 @@ input:checked + .slider-theme::before {
     color: #a94442;
     background-color: #f2dede;
 }
+
+
 
 
 
@@ -712,22 +748,31 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding-bottom: 0.3rem;
+    justify-content: space-between;
+    padding: 0 0 0.3rem 0;
     border-radius: 10px;
+    position: relative;
 }
 
 .cake-card img {
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
     max-width: 100%;
     aspect-ratio: 2 / 3;
     object-fit: cover;
+    display: block;
 }
+
+.bottom-card-container {
+    position: relative;
+    bottom: 0;
+}
+
+
+
 
 .cake-card h3 {
     font-family: var(--font-accent);
 }
-
 
 
 .cake-card p {
@@ -739,8 +784,6 @@ main {
 }
 
 
-
-
 .price {
     font-weight: bold;
 }
@@ -748,12 +791,14 @@ main {
 .title {
     text-align: center;
     padding-block: 0.3rem;
-    min-height: 65px;
+    font-size: 1.2rem;
+    /* min-height: 65px; */
 }
 
 .price-string {
     margin-left: 5px;
     font-weight: bold;
+    text-align: center;
 }
 
 .add-to-cart {
@@ -762,15 +807,41 @@ main {
     justify-content: center;
     align-content: center;
     margin: 0.5rem;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.5rem;
     border: none;
     border-radius: 999px;
     background-color: var(--main-button-color);
+    font-size: 0.7rem;
+    width: 90%;
+}
+
+.more-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin: 0.1rem;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 999px;
+    background-color: #b0cc55;
+    font-size: 0.65rem;
+    width: 90%;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    margin: 0.5rem auto 1rem auto;
 }
 
 .weight-string {
     font-size: 0.9rem;
     opacity: 0.8;
+    text-align: center;
 }
 
 
@@ -872,9 +943,6 @@ main {
     text-align: center;
     padding: 1rem 2rem;
 }
-
-
-
 
 
 

@@ -238,3 +238,70 @@ if(resetButton) {
 }
 
 
+// buttons to make password visible
+document.querySelectorAll('.password-visually-hidden').forEach(button => {
+    button.addEventListener('click', () => {
+        // Find the input field located before the button
+        const input = button.parentElement.querySelector('input');
+        if (!input) return;
+
+        // Switch the input type
+        const isPassword = input.type === 'password';
+        input.type = isPassword ? 'text' : 'password';
+
+        // Find the available image
+        const icon = button.querySelector('img');
+        if (icon) {
+            icon.src = isPassword ? './assets/eyePasswordClose.svg' : './assets/eyePassword.svg';
+        }
+    });
+});
+
+let cakeCard = document.querySelectorAll('.cake-card');
+
+// opening by the "more details" button and transferring data about the cake there
+document.addEventListener('click', function(event) {
+    if(event.target.classList.contains('more-details')) {
+        const button = event.target;
+        const id = button.dataset.id;
+        const name = button.dataset.name;
+        let filling = button.dataset.filling;
+        switch (userLang) {
+            case 'ru':
+                if (filling === 'chocolate') filling = 'Шоколадная';
+                else if (filling === 'caramel') filling = 'Карамельная';
+                else if (filling === 'fruity') filling = 'Фруктовая';
+                break;
+
+            case 'cz':
+                if (filling === 'chocolate') filling = 'Čokoládová';
+                else if (filling === 'caramel') filling = 'Karamelová';
+                else if (filling === 'fruity') filling = 'Ovocná';
+                break;
+
+            default: // 'en' or fallback
+                if (filling === 'chocolate') filling = 'Chocolate';
+                else if (filling === 'caramel') filling = 'Caramel';
+                else if (filling === 'fruity') filling = 'Fruity';
+        }
+        const price = button.dataset.price;
+        const weight = button.dataset.weight;
+        const description = button.dataset.description;
+        const features = button.dataset.features;
+
+        const currentCake = {
+            id: id,
+            name: name,
+            filling: filling,
+            price: price,
+            weight: weight,
+            description: description,
+            features: features,
+        }
+
+        sessionStorage.setItem('currentCake', JSON.stringify(currentCake));
+        window.location.href = 'product.html';
+    }
+})
+
+

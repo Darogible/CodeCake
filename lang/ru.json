@@ -101,7 +101,19 @@
   "payment_error_text": "Ошибка в данных карты",
   "payment_button": "Оплатить",
   "payment_success": "✅ Платёж успешно подтверждён!",
-  "fail_payment": "❌ Не удалось выполнить платёж. Попробуйте ещё раз."
+  "fail_payment": "❌ Не удалось выполнить платёж. Попробуйте ещё раз.",
+  "reset_to_default": "Сбросить настройки",
+  "reset_to_default_button": "Сброс",
+  "reset_confirmation_message": "Вы уверены, что хотите сбросить всё? Все данные аккаунта, покупки и другие настройки будут удалены безвозвратно.",
+  "confirm_reset_button": "Сбросить",
+  "cancel_reset_button": "Отмена",
+  "more_details": "Подробнее",
+  "filling_text": "Начинка: ",
+  "features_text": "Особенности: "
+
+
+
+
 
 
 

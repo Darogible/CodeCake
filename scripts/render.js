@@ -24,10 +24,19 @@ function renderCardsOfCakes(cakesData) {
         title.classList.add('title');
         cakeCard.appendChild(title);
 
+        // get cake description with translation
+        const description = document.createElement('p');
+        description.textContent = cake.description[userLang];
+        cakeCard.appendChild(description);
+
+        const bottomCardContainer = document.createElement('div');
+        bottomCardContainer.classList.add('bottom-card-container');
+        cakeCard.append(bottomCardContainer);
+
         // create a string to display the price
         const priceString = document.createElement('div');
         priceString.classList.add('price-string');
-        cakeCard.appendChild(priceString);
+        bottomCardContainer.appendChild(priceString);
         const priceText = document.createElement('span');
         priceText.setAttribute('data-i18n', 'price');
         priceText.textContent = `price`;
@@ -40,7 +49,7 @@ function renderCardsOfCakes(cakesData) {
         // create a string to display weight
         const weightString = document.createElement('div');
         weightString.classList.add('weight-string');
-        cakeCard.appendChild(weightString);
+        bottomCardContainer.appendChild(weightString);
         const weightText = document.createElement('span');
         weightText.textContent = `weight`;
         weightText.setAttribute('data-i18n', 'weight');
@@ -53,19 +62,37 @@ function renderCardsOfCakes(cakesData) {
         const filling = document.createElement('span');
         filling.textContent = cake.filling;
         filling.classList.add('filling');
-        cakeCard.appendChild(filling);
+        bottomCardContainer.appendChild(filling);
 
-        // get cake description with translation
-        const description = document.createElement('p');
-        description.textContent = cake.description[userLang];
-        cakeCard.appendChild(description);
+        const buttonsContainer = document.createElement('div');
+        buttonsContainer.classList.add('buttons-container');
+        bottomCardContainer.appendChild(buttonsContainer);
+
+        // create button "more details"
+        const moreDetailsButton = document.createElement('button');
+        moreDetailsButton.classList.add('more-details');
+        moreDetailsButton.textContent= "More details";
+        moreDetailsButton.setAttribute('data-i18n', 'more_details');
+        buttonsContainer.appendChild(moreDetailsButton);
+        /* add all important data about THIS cake to the button */
+        moreDetailsButton.dataset.id = cake.id;
+        moreDetailsButton.dataset.name = cake.name[userLang];
+        moreDetailsButton.dataset.filling = cake.filling;
+        moreDetailsButton.dataset.price = cake.price;
+        moreDetailsButton.dataset.weight = cake.weight;
+        moreDetailsButton.dataset.description = cake.description[userLang];
+        moreDetailsButton.dataset.features = cake.features
+            .map(feature => feature[userLang])
+            .join(', ');
+
+
 
         // create add cart button, no logic
         const addToCartButton = document.createElement('button');
         addToCartButton.classList.add('add-to-cart');
         addToCartButton.textContent = "Add to cart";
         addToCartButton.setAttribute('data-i18n', 'add_to_cart');
-        cakeCard.appendChild(addToCartButton);
+        buttonsContainer.appendChild(addToCartButton);
         /* add all important data about THIS cake to the button */
         addToCartButton.dataset.id = cake.id;
         addToCartButton.dataset.name = JSON.stringify(cake.name);

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css?v=1.0">
+    <link rel="stylesheet" href="styles/dark.css" id="dark-style" disabled>
+    <link rel="stylesheet" href="styles/product.css">
+    <title>Cake</title>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a class="header-logo" href="./index.html">
+            <img src="./assets/codeCake2.png" alt="CodeCake logo">
+            <span>CodeCake</span>
+        </a>
+    </div>
+
+    <button onclick="window.history.back()" class="back-button"  data-i18n="back_button">🡠 Back to main page</button>
+</header>
+
+<main>
+    <div class="main-header">
+        <div class="image-container">
+            <img id="image" alt="Cake">
+        </div>
+        <div class="main-info">
+            <h1 class="main-title"></h1>
+            <div>
+                <div class="filling-text">
+                    <span data-i18n="filling_text">Filling: </span>
+                    <p id="filling"></p>
+                </div>
+                <div class="features">
+                    <span data-i18n="features_text">Features: </span>
+                    <span id="features"></span>
+                </div>
+                <div class="price-and-weight">
+                    <div class="price">
+                    </div>
+                    <span>|</span>
+                    <div class="weight">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="product-description">
+        <p id="product-description-text"></p>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-container footer-product">
+        <p data-i18n="footer_copyright"> &copy; 2025 CodeCake – self-educational project</p>
+        <div class="footer-socials">
+            <p data-i18n="write_to_us">Follow us on our social networks: </p>
+            <div class="footer-socials-container">
+                <a href="https://github.com/Darogible" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/andrei-afanasev-a25884350/" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+<script src="./scripts/i18n.js" defer></script>
+<script src="./scripts/main.js" defer></script>
+<script type="module" src="./scripts/product.js" defer></script>
+</html>

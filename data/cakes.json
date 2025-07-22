@@ -7,14 +7,30 @@
       "cz": "Čokoládový samet"
     },
     "description": {
-      "en": "Smooth chocolate mousse cake with a crunchy base and cocoa topping.",
-      "ru": "Нежный шоколадный муссовый торт с хрустящей основой и посыпкой из какао.",
-      "cz": "Jemný čokoládový mousse dort s křupavým základem a kakaovým posypem."
+      "en": "This dessert was born from our grandmother's love for dark chocolate. One winter evening, she surprised the family with a silky mousse cake that melted on the tongue like velvet. Our version preserves that memory with a smooth 70% cocoa mousse, a crunchy chocolate-hazelnut base, and a light dusting of cocoa powder. A few shards of dark chocolate crown the top, adding a final touch of intensity.",
+      "ru": "Этот десерт родился из любви нашей бабушки к тёмному шоколаду. В один зимний вечер она удивила семью шелковистым муссовым тортом, который таял во рту, как бархат. Наша версия сохраняет это воспоминание: гладкий мусс из 70% какао, хрустящее шоколадно-ореховое основание и лёгкая какао-пудра сверху. Несколько кусочков тёмного шоколада венчают десерт, придавая последнюю ноту насыщенности.",
+      "cz": "Tento dezert vznikl z lásky naší babičky k hořké čokoládě. Jednoho zimního večera překvapila rodinu sametovým mousse dortem, který se rozplýval na jazyku. Naše verze zachovává tuto vzpomínku – jemný mousse z 70% kakaa, křupavý čokoládovo-oříškový základ a lehký kakaový posyp. Navrch jsme přidali pár kousků tmavé čokolády pro intenzivní zážitek."
     },
     "filling": ["chocolate"],
-    "features": [],
-    "weight": 800,
-    "price": 1450,
+    "features": [
+      {
+        "en": "mousse texture",
+        "ru": "муссовая текстура",
+        "cz": "mousse textura"
+      },
+      {
+        "en": "crunchy base",
+        "ru": "хрустящее основание",
+        "cz": "křupavý základ"
+      },
+      {
+        "en": "hand-decorated",
+        "ru": "ручное украшение",
+        "cz": "ruční zdobení"
+      }
+    ],
+    "weight": 400,
+    "price": 450,
     "image": "cake-001.jpg"
   },
   {
@@ -25,14 +41,30 @@
       "cz": "Vrstvené mokka"
     },
     "description": {
-      "en": "Classic layered cake with coffee-chocolate sponge and creamy filling, topped with chocolate curls.",
-      "ru": "Классический слоёный торт с кофейно-шоколадным бисквитом и кремовой прослойкой, украшен шоколадной стружкой.",
-      "cz": "Klasický vrstvený dort s kávovo-čokoládovým piškotem a krémovou náplní, ozdobený čokoládovými hoblinkami."
+      "en": "Our Layered Mocha cake was inspired by café mornings with our father, who always ordered coffee and a slice of something sweet. We recreated that feeling in every bite: alternating layers of fluffy sponge soaked in espresso, cocoa cream with a hint of vanilla, and a final topping of whipped mocha cream and chocolate sticks. The balance of sweetness and bitterness makes it perfect for both mornings and celebrations.",
+      "ru": "Наша «Слойка Мокко» вдохновлена семейными утрами в кафе — папа всегда заказывал кофе и кусочек чего-то сладкого. Мы воссоздали это чувство в каждом слое: воздушный бисквит, пропитанный эспрессо, какао-крем с ноткой ванили и завершающая шапка из кофейного крема с шоколадными палочками. Баланс сладости и горчинки делает этот торт идеальным и для завтраков, и для праздников.",
+      "cz": "Náš dort Vrstvené mokka vznikl z ranních kavárenských tradic s tátou, který si vždy dával kávu a sladký zákusek. V každém soustu najdete jemný piškot nasáklý espressem, kakaový krém s vanilkovým nádechem a vrstvu šlehačkového mokka krému s čokoládovými tyčinkami. Dokonalá rovnováha sladkosti a hořkosti pro každé ráno i oslavu."
     },
     "filling": ["chocolate"],
-    "features": [],
-    "weight": 1000,
-    "price": 590,
+    "features": [
+      {
+        "en": "coffee-flavored sponge",
+        "ru": "бисквит с кофейным вкусом",
+        "cz": "piškot s kávovou příchutí"
+      },
+      {
+        "en": "decorated with chocolate sticks",
+        "ru": "украшен шоколадными палочками",
+        "cz": "zdobený čokoládovými tyčinkami"
+      },
+      {
+        "en": "classic layered cake",
+        "ru": "классический слоёный торт",
+        "cz": "klasický vrstvený dort"
+      }
+    ],
+    "weight": 1150,
+    "price": 890,
     "image": "cake-002.jpg"
   },
   {
@@ -43,14 +75,30 @@
       "cz": "Červený samet"
     },
     "description": {
-      "en": "Classic red velvet cake with soft layers and a creamy cheese frosting.",
-      "ru": "Классический торт «Красный бархат» с мягкими коржами и кремом из сливочного сыра.",
-      "cz": "Klasický dort Red Velvet s měkkými vrstvami a krémem ze smetanového sýra."
+      "en": "Our Red Velvet cake was the very first we ever baked in the family bakery. We wanted something bold but tender, festive but simple. The deep-red cocoa sponge and smooth cream cheese frosting became a favorite from day one. Topped with a fresh berry, it’s a timeless classic for lovers of gentle chocolate flavor and creamy texture.",
+      "ru": "«Красный бархат» — первый торт, который мы испекли в нашей семейной кондитерской. Мы искали рецепт, который был бы одновременно ярким и нежным, праздничным и простым. Мягкий шоколадный бисквит с красным оттенком и крем из сливочного сыра сразу стал любимцем. Лёгкий ягодный акцент сверху завершает эту классику для тех, кто ценит деликатный вкус шоколада и крема.",
+      "cz": "Červený samet byl první dort, který jsme kdy upekli v naší rodinné cukrárně. Hledali jsme něco výrazného, ale jemného, slavnostního, ale jednoduchého. Kakaový piškot s červeným odstínem a krém ze smetanového sýra si okamžitě získal srdce všech. Navrch malá bobule pro decentní ovocný akcent – nadčasová klasika pro milovníky jemné čokolády a krémové textury."
     },
-    "filling": ["fruity"],
-    "features": [],
-    "weight": 900,
-    "price": 490,
+    "filling": ["chocolate"],
+    "features": [
+      {
+        "en": "cream cheese frosting",
+        "ru": "крем из сливочного сыра",
+        "cz": "krém ze smetanového sýra"
+      },
+      {
+        "en": "soft cocoa sponge",
+        "ru": "мягкий шоколадный бисквит",
+        "cz": "měkký kakaový piškot"
+      },
+      {
+        "en": "classic red velvet recipe",
+        "ru": "классический рецепт red velvet",
+        "cz": "klasický recept red velvet"
+      }
+    ],
+    "weight": 1550,
+    "price": 1190,
     "image": "cake-003.jpg"
   },
   {
@@ -61,14 +109,30 @@
       "cz": "Ovocná zahrada"
     },
     "description": {
-      "en": "Elegant cake topped with a generous mix of fresh berries and soft cream layers inside.",
-      "ru": "Элегантный торт с пышным слоем свежих ягод и нежным сливочным кремом внутри.",
-      "cz": "Elegantní dort s bohatou vrstvou čerstvého ovoce a jemným smetanovým krémem uvnitř."
+      "en": "This cake is our ode to summer mornings and fresh berries from grandma’s garden. We carefully layer vanilla sponge with light whipped cream and fill it with seasonal fruit. Each bite brings together juicy strawberries, raspberries and blueberries with a gentle touch of mint. Elegant and light, Berry Garden is perfect for birthdays, tea time, or just a moment of joy.",
+      "ru": "Этот торт — наша ода летним утрам и ягодам из бабушкиного сада. Ванильный бисквит, воздушный крем и начинка из сезонных фруктов создают гармонию вкуса. Каждый кусочек объединяет сочную клубнику, малину, чернику и лёгкий оттенок мяты. Элегантный и лёгкий, «Ягодный сад» идеально подойдёт для дня рождения, чаепития или просто мгновений радости.",
+      "cz": "Tento dort je naší poctou letním ránům a ovoci z babiččiny zahrady. Jemný vanilkový piškot se šlehačkovým krémem a vrstvami sezónního ovoce tvoří dokonalou kombinaci chutí. V každém soustu najdete šťavnaté jahody, maliny a borůvky s nádechem máty. Elegantní a lehký dort, ideální na oslavy, ke kávě nebo jen tak pro radost."
     },
     "filling": ["fruity"],
-    "features": [],
-    "weight": 1200,
-    "price": 790,
+    "features": [
+      {
+        "en": "fresh berries topping",
+        "ru": "украшен свежими ягодами",
+        "cz": "zdobený čerstvým ovocem"
+      },
+      {
+        "en": "light whipped cream",
+        "ru": "лёгкий сливочный крем",
+        "cz": "lehký šlehačkový krém"
+      },
+      {
+        "en": "vanilla sponge base",
+        "ru": "ванильный бисквит",
+        "cz": "vanilkový piškot"
+      }
+    ],
+    "weight": 1050,
+    "price": 990,
     "image": "cake-004.jpg"
   },
   {
@@ -79,14 +143,30 @@
       "cz": "Mangový vánek"
     },
     "description": {
-      "en": "Light cake with whipped cream frosting and juicy mango cubes on top.",
-      "ru": "Лёгкий торт с воздушным кремом и сочными кубиками манго сверху.",
-      "cz": "Lehký dort se šlehačkovým krémem a šťavnatými kousky manga navrchu."
+      "en": "We created Mango Breeze on a hot summer day, dreaming of something refreshing and exotic. This little cake is a tropical escape: layers of vanilla sponge with mango cream, all wrapped in airy whipped frosting. On top, fresh cubes of ripe mango and a sprig of rosemary create a fragrant finish. It’s like a vacation in every bite.",
+      "ru": "«Манговый бриз» родился в жаркий летний день, когда нам хотелось чего-то лёгкого и экзотического. Небольшой, но выразительный торт с ванильным бисквитом, манговым кремом и воздушной шапкой из сливок. Сверху — сочные кубики спелого манго и веточка розмарина для аромата. Настоящий отпуск в каждом кусочке.",
+      "cz": "Mangový vánek jsme vytvořili v horký letní den, když jsme toužili po něčem osvěžujícím a exotickém. Tento malý dort je tropickým únikem: vrstvy vanilkového piškotu s mangovým krémem, obalené v nadýchané šlehačce. Navrchu čerstvé kousky manga a snítka rozmarýnu pro voňavou tečku. Dovolená v každém soustu."
     },
     "filling": ["fruity"],
-    "features": [],
-    "weight": 300,
-    "price": 360,
+    "features": [
+      {
+        "en": "topped with fresh mango",
+        "ru": "украшен свежим манго",
+        "cz": "zdobený čerstvým mangem"
+      },
+      {
+        "en": "light whipped cream",
+        "ru": "лёгкий сливочный крем",
+        "cz": "lehký šlehačkový krém"
+      },
+      {
+        "en": "mini size for two",
+        "ru": "мини-формат на двоих",
+        "cz": "malý dort pro dva"
+      }
+    ],
+    "weight": 320,
+    "price": 350,
     "image": "cake-005.jpg"
   },
   {
@@ -97,14 +177,30 @@
       "cz": "Tropický lesk"
     },
     "description": {
-      "en": "Bright mousse cake with tropical fruit glaze and soft sponge base.",
-      "ru": "Яркий муссовый торт с тропической фруктовой глазурью и мягким бисквитом.",
-      "cz": "Zářivý mousse dort s tropickou ovocnou polevou a měkkým piškotem."
+      "en": "Tropical Glow is our sunshine in cake form. Inspired by holidays under palm trees, this mousse cake features a soft coconut sponge, creamy vanilla-passionfruit mousse, and a glossy mango glaze on top. Its vibrant color and delicate flavor bring brightness to any table — no passport required.",
+      "ru": "«Тропическое сияние» — это солнечный день в форме торта. Вдохновлённый отпуском под пальмами, он сочетает кокосовый бисквит, мусс из ванили и маракуйи и глянцевую манговую глазурь сверху. Яркий, нежный и освежающий, он наполняет светом любой стол — без необходимости куда-то лететь.",
+      "cz": "Tropický lesk je jako slunce ve formě dortu. Inspirován dovolenou pod palmami, tento mousse dort kombinuje kokosový piškot, vanilkovo-maracujový mousse a lesklou mangovou polevu navrchu. Jeho zářivá barva a jemná chuť přinesou světlo na každý stůl — bez nutnosti cestovat."
     },
-    "filling": ["fruity"],
-    "features": [],
-    "weight": 850,
-    "price": 520,
+    "filling": ["caramel"],
+    "features": [
+      {
+        "en": "mango-passion glaze",
+        "ru": "манго-маракуйевая глазурь",
+        "cz": "mangovo-maracujová poleva"
+      },
+      {
+        "en": "vanilla mousse",
+        "ru": "ванильный мусс",
+        "cz": "vanilkový mousse"
+      },
+      {
+        "en": "coconut sponge base",
+        "ru": "кокосовый бисквит",
+        "cz": "kokosový piškot"
+      }
+    ],
+    "weight": 880,
+    "price": 790,
     "image": "cake-006.jpg"
   },
   {
@@ -115,14 +211,302 @@
       "cz": "Karamelový popcorn"
     },
     "description": {
-      "en": "Fun party cake with caramel glaze and crunchy popcorn on whipped cream.",
-      "ru": "Весёлый праздничный торт с карамельной глазурью и хрустящим попкорном на сливочном креме.",
-      "cz": "Zábavný dort s karamelovou polevou a křupavým popcornem na šlehačkovém krému."
+      "en": "Caramel Popcorn is the most cheerful cake in our collection. It started as a joke for a movie night — and quickly became a family favorite. Fluffy sponge cake is covered in creamy vanilla frosting, layered with caramel cream inside, and crowned with golden popcorn and a drizzle of caramel. Light, playful, and unexpectedly addictive!",
+      "ru": "«Карамельный попкорн» — самый весёлый торт в нашей коллекции. Всё началось как шутка на вечер кино — и мгновенно стало любимым десертом всей семьи. Воздушный бисквит покрыт сливочным кремом, внутри — карамельная начинка, а сверху — золотистый попкорн и карамель. Лёгкий, игривый и неожиданно затягивающий!",
+      "cz": "Karamelový popcorn je nejveselejší dort z naší nabídky. Začal jako vtip na filmový večer — a rychle se stal rodinným favoritem. Nadýchaný piškot pokrytý vanilkovým krémem, uvnitř karamelová náplň a nahoře zlatavý popcorn s karamelovou polevou. Lehký, hravý a překvapivě návykový!"
     },
     "filling": ["caramel"],
-    "features": [],
+    "features": [
+      {
+        "en": "decorated with popcorn",
+        "ru": "украшен попкорном",
+        "cz": "zdobený popcornem"
+      },
+      {
+        "en": "caramel drizzle",
+        "ru": "карамельная глазурь",
+        "cz": "karamelová poleva"
+      },
+      {
+        "en": "light sponge base",
+        "ru": "лёгкий бисквит",
+        "cz": "lehký piškot"
+      }
+    ],
     "weight": 1000,
-    "price": 570,
+    "price": 890,
     "image": "cake-007.jpg"
+  },
+  {
+    "id": "cake-008",
+    "name": {
+      "en": "Chocolate Rose",
+      "ru": "Шоколадная роза",
+      "cz": "Čokoládová růže"
+    },
+    "description": {
+      "en": "Chocolate Rose was created for a birthday — but soon became our favorite choice for love and elegance. Layers of rich chocolate sponge and dark ganache cream are finished with a velvety cocoa dusting. A handmade chocolate rose sits on top, surrounded by striped chocolate sticks. For true chocolate romantics.",
+      "ru": "«Шоколадная роза» была создана к дню рождения, но быстро стала нашим фаворитом для выражения любви и изящества. Слои насыщенного шоколадного бисквита и крема из тёмного ганаша покрыты бархатистой пудрой какао. Венчает торт роза из шоколада, выполненная вручную, и шоколадные палочки. Для настоящих романтиков и ценителей шоколада.",
+      "cz": "Čokoládová růže vznikla pro narozeniny, ale brzy se stala naším nejoblíbenějším dortem pro vyjádření lásky a elegance. Vrstvy bohatého čokoládového piškotu a ganache krému jsou zakončeny jemným kakaovým posypem. Navrchu je ručně vyrobená čokoládová růže a pruhované čokoládové tyčinky. Pro opravdové milovníky čokolády."
+    },
+    "filling": ["chocolate"],
+    "features": [
+      {
+        "en": "decorated with chocolate rose",
+        "ru": "украшен шоколадной розой",
+        "cz": "zdobený čokoládovou růží"
+      },
+      {
+        "en": "cocoa dusted surface",
+        "ru": "поверхность с какао-пудрой",
+        "cz": "povrch s kakaovým posypem"
+      },
+      {
+        "en": "dark chocolate ganache",
+        "ru": "тёмный шоколадный ганаш",
+        "cz": "ganache z hořké čokolády"
+      }
+    ],
+    "weight": 950,
+    "price": 890,
+    "image": "cake-008.jpg"
+  },
+  {
+    "id": "cake-009",
+    "name": {
+      "en": "Choco Berry Party",
+      "ru": "Шоко-ягодная вечеринка",
+      "cz": "Čoko-ovocná párty"
+    },
+    "description": {
+      "en": "Created for a birthday celebration, Choco Berry Party is everything we love about festive cakes. Rich chocolate layers with fluffy cream, juicy berries on top, a splash of berry syrup and a sparkle to light the moment. This cake is made to be seen, shared, and devoured. Perfect for joyful gatherings.",
+      "ru": "«Шоко-ягодная вечеринка» была создана специально для дня рождения — и стала воплощением всего, что мы любим в праздничных тортах. Насыщенные шоколадные коржи, пышный крем, свежие ягоды, сироп и яркая искра наверху. Этот торт создан, чтобы его заметили, разделили и съели с удовольствием. Идеален для весёлой компании.",
+      "cz": "Čoko-ovocná párty vznikla pro narozeninovou oslavu a je vším, co máme na slavnostních dortech rádi. Bohaté čokoládové vrstvy, nadýchaný krém, čerstvé ovoce navrchu, ovocný sirup a prskavka pro tu pravou atmosféru. Dort, který si zaslouží pozornost – pro sdílení i sladké chvíle radosti."
+    },
+    "filling": ["chocolate"],
+    "features": [
+      {
+        "en": "decorated with fresh berries",
+        "ru": "украшен свежими ягодами",
+        "cz": "zdobený čerstvým ovocem"
+      },
+      {
+        "en": "party-ready design",
+        "ru": "оформление для праздника",
+        "cz": "vhodný na oslavy"
+      },
+      {
+        "en": "rich chocolate cream",
+        "ru": "насыщенный шоколадный крем",
+        "cz": "bohatý čokoládový krém"
+      }
+    ],
+    "weight": 1600,
+    "price": 1290,
+    "image": "cake-009.jpg"
+  },
+  {
+    "id": "cake-010",
+    "name": {
+      "en": "White Forest",
+      "ru": "Белый лес",
+      "cz": "Bílý les"
+    },
+    "description": {
+      "en": "White Forest is our most elegant creation. Its smooth white cream and subtle decoration make it a perfect centerpiece for weddings, anniversaries, or serene gatherings. Inside you’ll find fluffy vanilla sponge and light cream layers, balanced with the slight tartness of wild berries. Simple. Refined. Timeless.",
+      "ru": "«Белый лес» — самый изящный торт в нашей коллекции. Белоснежный крем и сдержанное оформление делают его идеальным выбором для свадеб, юбилеев и камерных встреч. Внутри — мягкий ванильный бисквит и лёгкий крем, дополненные едва заметной кислинкой лесных ягод. Просто. Тонко. Вне времени.",
+      "cz": "Bílý les je náš nejrafinovanější dort. Jeho bílý krém a jemná výzdoba z něj dělají ideální střed slavnostního stolu – ať už jde o svatbu, výročí nebo klidné posezení. Uvnitř najdete vanilkový piškot, lehký krém a nádech kyselkavých lesních plodů. Jednoduchý. Elegantní. Nadčasový."
+    },
+    "filling": ["fruity"],
+    "features": [
+      {
+        "en": "decorated with wild berries",
+        "ru": "украшен лесными ягодами",
+        "cz": "zdobený lesním ovocem"
+      },
+      {
+        "en": "whipped white cream",
+        "ru": "взбитый белый крем",
+        "cz": "šlehačkový bílý krém"
+      },
+      {
+        "en": "minimalist floral texture",
+        "ru": "минималистичная текстура крема",
+        "cz": "minimalistická krémová textura"
+      }
+    ],
+    "weight": 1000,
+    "price": 990,
+    "image": "cake-010.jpg"
+  },
+  {
+    "id": "cake-011",
+    "name": {
+      "en": "Rustic Pear",
+      "ru": "Деревенская груша",
+      "cz": "Rustikální hruška"
+    },
+    "description": {
+      "en": "Rustic Pear is our tribute to homemade pies and autumn comfort. This cake combines soft sponge with a layer of caramelized pear, wrapped in creamy frosting and topped with blueberries and dried flowers. It’s imperfect in the most perfect way — tender, natural, and full of warmth.",
+      "ru": "«Деревенская груша» — это наш привет домашним пирогам и уюту осени. Мягкий бисквит, слой карамелизированной груши, лёгкий крем и украшение из черники и сухоцветов. Он несовершенен — и именно этим прекрасен. Нежный, натуральный, тёплый.",
+      "cz": "Rustikální hruška je naším poděkováním domácím koláčům a podzimní pohodě. Jemný piškot s vrstvou karamelizované hrušky, krémový obal, borůvky a sušené květy navrchu. Není dokonalý — a právě proto je kouzelný. Přirozený, jemný, plný klidu."
+    },
+    "filling": ["fruity"],
+    "features": [
+      {
+        "en": "caramelized pear layer",
+        "ru": "карамелизированная груша",
+        "cz": "karamelizovaná hruška"
+      },
+      {
+        "en": "blueberry topping",
+        "ru": "украшен черникой",
+        "cz": "zdobený borůvkami"
+      },
+      {
+        "en": "handmade rustic look",
+        "ru": "ручная деревенская подача",
+        "cz": "ruční rustikální vzhled"
+      }
+    ],
+    "weight": 900,
+    "price": 790,
+    "image": "cake-011.jpg"
+  },
+  {
+    "id": "cake-012",
+    "name": {
+      "en": "Naked Garden",
+      "ru": "Сад без прикрас",
+      "cz": "Zahrada bez polevy"
+    },
+    "description": {
+      "en": "Naked Garden is a celebration of nature and simplicity. This naked-style cake reveals golden sponge layers and smooth cream in between. The top is crowned with seasonal berries, edible flowers and crunchy hazelnut crumble. It’s fresh, earthy, and full of honest flavor — just the way nature intended.",
+      "ru": "«Сад без прикрас» — это праздник натуральности и простоты. Без покрытия по бокам, он открыто показывает слои золотистого бисквита и нежного крема. Верх украшен сезонными ягодами, съедобными цветами и посыпкой из дроблёного фундука. Свежо, натурально и по-настоящему вкусно — как сама природа.",
+      "cz": "Zahrada bez polevy je oslavou přirozenosti a jednoduchosti. Tento „nahý“ dort odhaluje vrstvy zlatavého piškotu a jemného krému. Navrchu se vyjímají sezónní plody, jedlé květy a křupavý lískový posyp. Čerstvý, přírodní a plný poctivé chuti — tak, jak to zamýšlela příroda."
+    },
+    "filling": ["fruity"],
+    "features": [
+      {
+        "en": "naked-style cake",
+        "ru": "торт без покрытия",
+        "cz": "nahý dort"
+      },
+      {
+        "en": "decorated with berries and flowers",
+        "ru": "украшен ягодами и цветами",
+        "cz": "zdobený ovocem a květy"
+      },
+      {
+        "en": "hazelnut crumble topping",
+        "ru": "посыпка из дроблёного фундука",
+        "cz": "posyp z nasekaných lískových oříšků"
+      }
+    ],
+    "weight": 750,
+    "price": 690,
+    "image": "cake-012.jpg"
+  },
+  {
+    "id": "cake-013",
+    "name": {
+      "en": "Morning Frost",
+      "ru": "Утренний иней",
+      "cz": "Ranní jinovatka"
+    },
+    "description": {
+      "en": "Morning Frost captures the quiet elegance of a fresh morning. With its silky cream finish and a touch of wild berries, it’s both comforting and refined. Inside you’ll find delicate sponge and whipped cream layers — light as air. A calm, universal choice for tea, brunch, or gentle celebrations.",
+      "ru": "«Утренний иней» — воплощение спокойной элегантности свежего утра. Гладкое сливочное покрытие и горсть лесных ягод создают ощущение уюта и лёгкости. Внутри — нежные бисквитные коржи и воздушный крем. Универсальный выбор для чаепитий, бранчей и спокойных праздников.",
+      "cz": "Ranní jinovatka zachycuje tichou eleganci svěžího rána. Jemný smetanový povrch a několik lesních plodů dodávají dortu klidný a lehký charakter. Uvnitř se skrývá jemný piškot a nadýchaný krém. Ideální pro čaj, brunch nebo jemné oslavy."
+    },
+    "filling": ["fruity"],
+    "features": [
+      {
+        "en": "whipped white cream",
+        "ru": "взбитый белый крем",
+        "cz": "šlehačkový bílý krém"
+      },
+      {
+        "en": "decorated with wild berries",
+        "ru": "украшен лесными ягодами",
+        "cz": "zdobený lesním ovocem"
+      },
+      {
+        "en": "delicate vanilla sponge",
+        "ru": "нежный ванильный бисквит",
+        "cz": "jemný vanilkový piškot"
+      }
+    ],
+    "weight": 1250,
+    "price": 1090,
+    "image": "cake-013.jpg"
+  },
+  {
+    "id": "cake-014",
+    "name": {
+      "en": "Honey Bee",
+      "ru": "Медовая пчёлка",
+      "cz": "Medová včelka"
+    },
+    "description": {
+      "en": "Honey Bee is our playful take on the beloved honey cake. Delicate layers soaked in honey syrup alternate with creamy filling, all covered in golden crumbs. But what truly makes it special are the tiny bees on top — handmade with care, they bring a smile to every celebration.",
+      "ru": "«Медовая пчёлка» — наш игривый взгляд на классический медовик. Нежные слои, пропитанные мёдом, чередуются с кремом и покрыты золотистой крошкой. А особую атмосферу создают пчёлки из мастики — каждая сделана вручную и вызывает улыбку на любом празднике.",
+      "cz": "Medová včelka je hravá verze klasického medového dortu. Jemné vrstvy nasáklé medem se střídají s krémem a celý dort je obalený zlatavou drobenkou. A co jej činí výjimečným? Ručně vyráběné včelky na povrchu, které vykouzlí úsměv na každé oslavě."
+    },
+    "filling": ["caramel"],
+    "features": [
+      {
+        "en": "classic honey sponge",
+        "ru": "классический медовый бисквит",
+        "cz": "klasický medový piškot"
+      },
+      {
+        "en": "decorated with handmade bees",
+        "ru": "украшен пчёлками ручной работы",
+        "cz": "zdobený ručně vyráběnými včelkami"
+      },
+      {
+        "en": "creamy layered texture",
+        "ru": "нежная слоистая структура",
+        "cz": "jemná vrstvená struktura"
+      }
+    ],
+    "weight": 1100,
+    "price": 790,
+    "image": "cake-014.jpg"
+  },
+  {
+    "id": "cake-015",
+    "name": {
+      "en": "Royal Drip",
+      "ru": "Королевский дрим",
+      "cz": "Královský drip"
+    },
+    "description": {
+      "en": "Royal Drip is a cake that turns heads. With its caramel-chocolate glaze, tall silhouette, and elegant meringue swirls, it's made for grand celebrations. Inside: layers of soft sponge and velvety caramel cream. Outside: berries, silver pearls and style. Every detail is crafted for royalty.",
+      "ru": "«Королевский дрим» — торт, который невозможно не заметить. Карамельно-шоколадная глазурь, высокая форма, завитки из безе и серебряный декор — всё говорит о празднике. Внутри — мягкие коржи и крем с карамельной ноткой. Снаружи — ягоды, стиль и внимание к деталям. Создан для торжеств.",
+      "cz": "Královský drip je dort, který přitahuje pozornost. Karamelovo-čokoládová poleva, vysoká silueta, zdobený pusinkami a stříbrnými perlami – vše připraveno pro slavnostní chvíle. Uvnitř jemné vrstvy piškotu a karamelový krém. Venku elegance a preciznost. Skutečně královský."
+    },
+    "filling": ["caramel"],
+    "features": [
+      {
+        "en": "chocolate-caramel drip glaze",
+        "ru": "карамельно-шоколадный декор",
+        "cz": "karamelovo-čokoládová poleva"
+      },
+      {
+        "en": "topped with meringue swirls",
+        "ru": "украшен безе-розетками",
+        "cz": "zdobený pusinkami"
+      },
+      {
+        "en": "elegant silver decor",
+        "ru": "элегантный серебряный декор",
+        "cz": "elegantní stříbrný dekor"
+      }
+    ],
+    "weight": 1300,
+    "price": 1990,
+    "image": "cake-015.jpg"
   }
 ]

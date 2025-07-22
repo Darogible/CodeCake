@@ -95,7 +95,19 @@
   "payment_error_text": "Error in card data",
   "payment_button": "Pay",
   "payment_success": "✅ Payment successfully confirmed!",
-  "fail_payment": "❌ Payment failed. Please try again."
+  "fail_payment": "❌ Payment failed. Please try again.",
+  "reset_to_default": "Reset to default",
+  "reset_to_default_button": "Reset",
+  "reset_confirmation_message": "Are you sure you want to reset? All account data, purchases, and other settings will be permanently deleted.",
+  "confirm_reset_button": "Reset",
+  "cancel_reset_button": "Cancel",
+  "more_details": "More details",
+  "filling_text": "Filling: ",
+  "features_text": "Features: "
+
+
+
+
 
 
 

@@ -101,6 +101,18 @@
   "payment_error_text": "Chyba v údajích o kartě",
   "payment_button": "Zaplatit",
   "payment_success": "✅ Platba byla úspěšně potvrzena!",
-  "fail_payment": "❌ Platba se nezdařila. Zkuste to prosím znovu."
+  "fail_payment": "❌ Platba se nezdařila. Zkuste to prosím znovu.",
+  "reset_to_default": "Obnovit výchozí nastavení",
+  "reset_to_default_button": "Obnovit",
+  "reset_confirmation_message": "Opravdu chcete obnovit výchozí nastavení? Všechna data účtu, nákupy a ostatní nastavení budou trvale odstraněna.",
+  "confirm_reset_button": "Obnovit",
+  "cancel_reset_button": "Zrušit",
+  "more_details": "Více informací",
+  "filling_text": "Náplň: ",
+  "features_text": "Vlastnosti: "
+
+
+
+
 
 }

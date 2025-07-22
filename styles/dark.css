@@ -52,7 +52,7 @@ header, .footer-container {
 }
 
 
-.profile-history-container, .goods-in-order, .account-question {
+.profile-history-container, .goods-in-order, .account-question, .main-header {
     background-color: rgb(30, 30, 30) !important;
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.4) !important;
 }

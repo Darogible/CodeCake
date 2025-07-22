@@ -66,12 +66,13 @@
           <li data-lang="ru">Русский</li>
         </ul>
       </div>
-      <div>
-        <button data-i18n="reset_to_default" class="reset-button" id="reset-button">
-          Reset to default
+
+      <div class="reset-container">
+        <p data-i18n="reset_to_default">Reset to default</p>
+        <button data-i18n="reset_to_default_button" class="reset-button" id="reset-button">
+          Reset
         </button>
       </div>
-
     </nav>
   </header>
 
@@ -111,10 +112,12 @@
                 <span data-i18n="caramel">Caramel</span>
               </label>
 
+              <!--
               <label>
                 <input type="checkbox" class="input-filling" name="filling" value="no-sugar">
                 <span data-i18n="no_sugar">No sugar</span>
               </label>
+              -->
             </div>
 
 
@@ -159,7 +162,9 @@
       <p data-i18n="footer_copyright"> &copy; 2025 CodeCake – self-educational project</p>
 
       <div class="footer-tel">
-        <p><span data-i18n="footer_our_tel">To order a cake, call:</span> <a href="+420999999999">+420 999 999 999</a></p>
+        <p><span data-i18n="footer_our_tel">To order a cake, call:</span>
+          <a href="tel:+420999999999">+420 999 999 999</a>
+        </p>
         <p data-i18n="footer_customer_tel">  Or leave your number, we will call you back: </p>
         <div class="footer-customer-tel">
           <input type="tel" placeholder="+420 555 777 888">
@@ -199,12 +204,17 @@
             type="email"
             placeholder="example@gmail.com"
     >
-    <input
-            id="log-in-password-input"
-            data-i18n-placeholder="log_in_password"
-            type="password"
-            placeholder="Enter your password"
-    >
+    <div class="input-password-wrapper">
+      <input
+              id="log-in-password-input"
+              data-i18n-placeholder="log_in_password"
+              type="password"
+              placeholder="Enter your password"
+      >
+      <button id="log-in-password-visually-hidden" class="password-visually-hidden">
+        <img src="./assets/eyePassword.svg" alt="Show password" class="eye-icon">
+      </button>
+    </div>
     <div class="log-in-error visually-hidden" data-i18n="log_in_error">Incorrect email or password</div>
     <button id="log-in-button" data-i18n="log_in_button">Log in</button>
     <div class="question-about-sign-up">
@@ -241,33 +251,33 @@
     <div>
       <p data-i18n="password">Password</p>
       <div class="password-input-container">
-        <input
-                id="sign-up-password-input"
-                data-i18n-placeholder="sign_up_password"
-                type="password"
-                placeholder="Enter your password"
-        >
-        <!--
-        <button id="password-visually-hidden">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-               xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 12C3.5 7 8 4 12 4C16 4 20.5 7 23 12C20.5 17 16 20 12 20C8 20 3.5 17 1 12Z"
-                  stroke="black" stroke-width="2" fill="none"/>
-            <circle cx="12" cy="12" r="3" stroke="black" stroke-width="2" fill="black"/>
-          </svg>
-        </button>
-        -->
+        <div class="input-password-wrapper">
+          <input
+                  id="sign-up-password-input"
+                  data-i18n-placeholder="sign_up_password"
+                  type="password"
+                  placeholder="Enter your password"
+          >
+          <button id="password-visually-hidden" class="password-visually-hidden">
+            <img src="./assets/eyePassword.svg" alt="Show password" class="eye-icon">
+          </button>
+        </div>
       </div>
       <div id="strength-password" class="visually-hidden control-input-correctness"></div>
     </div>
     <div>
       <p data-i18n="confirm_password">Confirm password</p>
-      <input
-              id="sign-up-repeat-password-input"
-              data-i18n-placeholder="sign_up_repeat_password"
-              type="password"
-              placeholder="Repeat your password"
-      >
+      <div class="input-password-wrapper">
+        <input
+                id="sign-up-repeat-password-input"
+                data-i18n-placeholder="sign_up_repeat_password"
+                type="password"
+                placeholder="Repeat your password"
+        >
+        <button id="confirm-password-visually-hidden" class="password-visually-hidden">
+          <img src="./assets/eyePassword.svg" alt="Show password" class="eye-icon">
+        </button>
+      </div>
       <div id="repeat-password" class="visually-hidden control-input-correctness"></div>
     </div>
     <div>
